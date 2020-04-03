@@ -1,7 +1,7 @@
 <nav class="sidebar" 
-    [ngStyle]="{'visibility':  (spinTheLines) ?  'hidden' :  'visible',
+    [ngStyle]="{'opacity':  (spinTheLines) ?  '0' :  '1',
                 'marginLeft':  (spinTheLines) ? '100%' : '0px', 
-                'transition':  (spinTheLines) ?   'visibility ease-in 0ms 300ms' : 'visibility ease-in 0ms'}">
+                'transition':  (spinTheLines) ?   'opacity ease-in 500ms 300ms' : 'opacity ease-in 500ms'}">
     <div class="cover"
         [ngStyle]="{'marginLeft': (spinTheLines) ? '130vw' : '0px'}">
         <ul>
