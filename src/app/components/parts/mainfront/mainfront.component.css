@@ -1,0 +1,51 @@
+.wraper{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top{
+
+    background-image: url("../../../sources/img/small/romanticdinner.svg");
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: bottom  right;
+    
+    background-color: #f1a900;
+    border: 1px solid red;
+    height: 10rem;
+    width: 100%;
+}
+
+.down{
+    border: 1px solid red;
+    height: 10rem;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+
+    border: black solid 1px;
+    width: 50%;
+    height: 100%;
+}
+
+.rigth{
+    border: black solid 1px;
+    width: 50%;
+    height: 100%;
+
+}
+
+h2{
+    width:50%;
+    font-size: 2rem;
+    color: #ff0044;
+    margin: 1rem;
+}

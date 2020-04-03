@@ -4,7 +4,7 @@ import { FrontComponent } from './components/pages/front/front.component';
 
 
 const routes: Routes = [
-  {path:"",component: FrontComponent}
+  {path:'',component: FrontComponent}
 ];
 
 @NgModule({
