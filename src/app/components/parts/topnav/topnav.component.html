@@ -1,0 +1,28 @@
+<nav>
+    <div class="heading">
+        <h1>
+            {{ Heading }}
+        </h1>
+         
+    </div>
+
+    <div class="hamburger"
+            (click)="openMenu()">
+        <p [ngClass]="line"
+           [ngStyle]="{ 'opacity':  !(spinTheLines) ? '0' : '1',
+                        'marginTop': !(spinTheLines) ? '0px' : '7px',
+                        'transform': !(spinTheLines) ? 'rotate(443deg)' : 'rotate(0deg)' }">
+        </p>
+        <p [ngClass]="line"
+           [ngStyle]="{ 
+                        'marginTop': !(spinTheLines) ? '16px' : '7px',
+                        'transform': !(spinTheLines) ? 'rotate(225deg)' : 'rotate(0deg)' }">
+        </p>
+        <p [ngClass]="line"
+           [ngStyle]="{'marginTop': !(spinTheLines) ? '-5px' : '7px',
+                       'transform': !(spinTheLines) ? 'rotate(315deg)' : 'rotate(0deg)' }"></p>
+    </div>
+    <app-menu [spinTheLines]="spinTheLines"></app-menu>
+</nav>
+
+

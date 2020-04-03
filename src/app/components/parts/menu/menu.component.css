@@ -1,0 +1,60 @@
+.sidebar{
+    transition: margin-left ease-in 500ms;
+}
+.cover::before{
+    position: fixed;
+    top:0;
+    left: 0;
+    content: " ";
+    height: 130vh;
+    width: 100%;
+    opacity: 0.3;
+    background-color: #777;
+    z-index: 1;
+    transition: margin-left ease-in 500ms;
+    overflow-x: hidden;
+
+
+    
+}
+
+.cover{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 130vh;
+    transition: margin-left ease-in 500ms;
+    overflow-x: hidden;    
+}
+
+
+
+ul{
+    position: relative;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+}
+
+
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bolder;
+    
+}
+
+a:hover {
+    color: red;
+  }
+
+
+li{
+    margin-top: 2rem;
+   text-align: center;
+    
+}
+

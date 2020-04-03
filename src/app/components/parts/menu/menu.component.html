@@ -1,0 +1,14 @@
+<nav class="sidebar" 
+    [ngStyle]="{'visibility':  (spinTheLines) ?  'hidden' :  'visible',
+                'marginLeft':  (spinTheLines) ? '-100rem' : '0px', 
+                'transition':  (spinTheLines) ?   'visibility ease-in 0ms 300ms' : 'visibility ease-in 0ms'}">
+    <div class="cover"
+        [ngStyle]="{'marginLeft': (spinTheLines) ? '-100rem' : '0px'}">
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="#">Biljetter</a></li>
+            <li><a href="#">Medlem</a></li>
+            <li><a href="#">Om oss</a></li>
+        </ul>
+    </div>
+</nav>

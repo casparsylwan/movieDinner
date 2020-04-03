@@ -1,0 +1,66 @@
+nav{
+    position: fixed;
+    background-color: #000;
+    width: 100vw;
+    height: 4rem;
+    
+ 
+
+
+}
+
+.hamburger{
+    position: relative;
+    /*
+    background-color: white;
+    */
+    width: 4rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    float: right;
+    height: 100%;
+    z-index: 10;
+
+}
+
+.line{
+
+    background-color: white;
+    width: 3rem;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 7px;
+    transition: transform ease-in 500ms, opacity ease-out 500ms, height ease-in 500ms;
+}
+
+.heading{
+    float: left;
+    width: 15rem;
+    color: #fff;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.heading h1{
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1rem; 
+    animation: 
+    typing 2s steps(10, end),
+    blink-caret .1s step-end infinite;
+}
+
+
+
+@keyframes typing{
+    
+    from{ width: 0 }
+    to{ width: 100%;}
+
+    
+}
+
