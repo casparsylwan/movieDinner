@@ -1,5 +1,5 @@
 .wraper{
-    height: 130vh;
+    
     width: 100vw;
     
     padding-top: 4rem;
@@ -22,7 +22,7 @@
     transition: height ease-in 500ms;
 }
 
-
+/*-------------Welcome page finish here---------------*/
 
 .down{
     
@@ -48,9 +48,14 @@
 h2{
     width:50%;
     font-size: 2rem;
+    font-weight: bold;
+    font-family: Helvetica;
     color: #f11111;
     margin: 1rem;
 }
+
+
+/*-----img-tag-------*/
 
 img{
     height: 180px;
@@ -62,9 +67,25 @@ img:active{
     transform: scale(1.2);
 }
 
+/*-------------The number of tickets------------------*/
+
+input{
+    border-radius: 5px;
+}
+
+.howmay{
+    margin: 0 auto;
+    width: 100vw;
+    border: black solid 1px;
+}
+
+
+/*----------------Trailers----------------------*/
+
 .video{
     width: 100%;
     margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .iframe{

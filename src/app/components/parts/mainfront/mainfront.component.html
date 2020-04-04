@@ -1,37 +1,39 @@
 <div class="wraper">
-    <div [ngStyle]="stateChangeMainTop()"
-        class="top">
+    <div [ngStyle]="stateChangeMainTop()" class="top">
         <h2>
             {{ fronttext }}
         </h2>
     </div>
+
+<!------------------Order tickets starts here------------------------>
+
     <div class="down">
-     
-        <div class="rigth"
-        *ngFor="let img of movieInfo.movies; let i = index">
+
+        <div class="rigth" *ngFor="let img of movieInfo.movies; let i = index">
             <span (click)="showTrailer(i)">
-              <img   [src]="img.img" [alt]="img.name">
+                <img [src]="img.img" [alt]="img.name">
             </span>
         </div>
-        
-        <div class="left"></div>
+    </div>
+
+    <!--[(ngModel)]="tickets"-->
+    <div *ngIf="(state==1)" class="howmany">
+        <input type="number" class="numberOfTickets" min="1" max="20" value="1"  />
+            <button (click)="getNumberOfTickets()" class="tickets">
+            skicka
+        </button>
     </div>
     <div class="video">
-        <div *ngIf="(state==1)" class="iframe">
-            <iframe 
-            [src] = "urlSafe" 
-            frameborder="0" allow="accelerometer;
+        
+            <div *ngIf="(state==1)" class="iframe">
+                <iframe [src]="urlSafe" frameborder="0" allow="accelerometer;
              autoplay;
              encrypted-media; 
              gyroscope; 
-             picture-in-picture" 
-             allowfullscreen>
-            </iframe>
-            <!--
-                "https://www.youtube.com/embed/m8e-FF8MsqU"
-                "https://www.youtube.com/embed/uPIEn0M8su0"
-            -->
+             picture-in-picture" allowfullscreen>
+                </iframe>
+
+            </div>
         </div>
+        <app-footer></app-footer>
     </div>
-    <app-footer></app-footer>
-</div>
