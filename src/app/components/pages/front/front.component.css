@@ -1,8 +1,9 @@
 .wraper{
-   
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     background-color: #f1a900;
-    overflow: hidden;
+    margin-top: auto;
     
 }
 
