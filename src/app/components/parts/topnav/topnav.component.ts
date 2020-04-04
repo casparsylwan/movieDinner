@@ -12,6 +12,7 @@ export class TopnavComponent implements OnInit {
   line:string = "line";
 
   Heading:string = "Bio och Middag"
+  
 
   spinTheLines:boolean = true;
   closeMenu:boolean = false;

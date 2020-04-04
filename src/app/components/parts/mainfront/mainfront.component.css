@@ -69,14 +69,37 @@ img:active{
 
 /*-------------The number of tickets------------------*/
 
+span{
+    color: #f11111;
+    font-weight: bold;
+
+}
+
 input{
     border-radius: 5px;
+}
+
+.tickets, .numberOfTickets{
+    font-size: 1.2rem;
+    font-weight: 1.2rem;
+}
+
+.tickets{
+    border-radius: 20px;
+    background-color: #fff;
 }
 
 .howmay{
     margin: 0 auto;
     width: 100vw;
     border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-input{
+    margin-top: 2rem;
+    display: flex;
 }
 
 
