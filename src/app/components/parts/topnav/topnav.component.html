@@ -22,7 +22,7 @@
            [ngStyle]="{'marginTop': !(spinTheLines) ? '-5px' : '7px',
                        'transform': !(spinTheLines) ? 'rotate(315deg)' : 'rotate(0deg)' }"></p>
     </div>
-    <app-menu *ngIf="!(closeMenu)" [spinTheLines]="spinTheLines"></app-menu>
+    <app-menu *ngIf="(closeMenu)" [spinTheLines]="spinTheLines"></app-menu>
 </nav>
 
 

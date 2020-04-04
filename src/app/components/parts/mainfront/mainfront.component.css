@@ -16,9 +16,9 @@
     background-position: bottom  right;
     
     background-color: #f1a900;
-    
-    height: 15rem;
+
     width: 100%;
+    transition: height ease-in 500ms;
 }
 
 
