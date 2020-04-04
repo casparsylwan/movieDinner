@@ -1,11 +1,6 @@
 footer{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top:120vh;
-    width: 100vw;
-    height: 2rem;
-    background-color: #000;
+    position: fixed;
+    bottom: 0;    
     text-align: center;
     color:#fff;
 }
