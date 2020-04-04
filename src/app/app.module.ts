@@ -8,6 +8,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { TopnavComponent } from './components/parts/topnav/topnav.component';
 import { MenuComponent } from './components/parts/menu/menu.component';
 import { MainfrontComponent } from './components/parts/mainfront/mainfront.component';
+import { FooterComponent } from './components/parts/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainfrontComponent } from './components/parts/mainfront/mainfront.compo
     AboutComponent,
     TopnavComponent,
     MenuComponent,
-    MainfrontComponent
+    MainfrontComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
