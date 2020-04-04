@@ -1,10 +1,8 @@
 .wraper{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+
+    height: 120vh;
     width: 100vw;
     background-color: #f1a900;
-    
-    
+    padding-bottom: 4rem;    
 }
 
