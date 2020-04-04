@@ -21,20 +21,23 @@
     width: 100%;
 }
 
+.down::-webkit-scrollbar{
+    width: 100%;
+}
+
 .down{
     
     height: 20rem;
     width: 100%;
 
-    overflow-x: scroll;
-    overflow-y: hidden;
+
     white-space: nowrap;
     /*
     white-space: nowrap;
-    
+    */
     overflow: auto;
     white-space: nowrap;
-   */
+   
     
 }
 
