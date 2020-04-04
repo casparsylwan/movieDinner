@@ -13,7 +13,7 @@ export class TopnavComponent implements OnInit {
   Heading:string = "Bio och Middag"
 
   spinTheLines:boolean = true;
-
+  closeMenu:boolean = true;
 
   constructor() { }
 
@@ -23,6 +23,7 @@ export class TopnavComponent implements OnInit {
   openMenu(){
 
     this.spinTheLines = !this.spinTheLines;
+    setTimeout(()=>this.closeMenu = this.spinTheLines, 500);
 
   }
  
