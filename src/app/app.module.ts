@@ -10,6 +10,9 @@ import { TopnavComponent } from './components/parts/topnav/topnav.component';
 import { MenuComponent } from './components/parts/menu/menu.component';
 import { MainfrontComponent } from './components/parts/mainfront/mainfront.component';
 import { FooterComponent } from './components/parts/footer/footer.component';
+import { SeatsComponent } from './components/parts/seats/seats.component';
+
+import { ClickColorDirective } from './components/models/click-color';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { FooterComponent } from './components/parts/footer/footer.component';
     TopnavComponent,
     MenuComponent,
     MainfrontComponent,
-    FooterComponent
+    FooterComponent,
+    SeatsComponent,
+    ClickColorDirective
   ],
   imports: [
     BrowserModule,

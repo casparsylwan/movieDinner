@@ -1,0 +1,82 @@
+
+
+input{
+    border: #000 solid 2px;
+}
+
+.moviebox{
+
+    
+    background-color: #111;
+    padding-left: 30%;
+    padding-right: 10%;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+
+
+    display: grid;
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    align-items: center;
+    
+
+}
+
+.seatsheading{
+
+    width: 100%;
+    background-color: #111;
+    padding-bottom:  2rem;
+    
+}
+
+.seatsheading h2{
+
+    color: #fff;
+    padding-top: 2rem;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+.cinema{
+
+    border: solid #fff 3px;
+    border-top: 6px #ff3333 solid;
+    border-radius: 10px;
+    height: 10rem;
+    width: 10rem;
+    
+
+    align-self: center;
+    justify-self: center;
+
+}
+
+
+.cinema p{
+
+    color: #fff;
+    padding-top: 2rem;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+.seat{
+
+    border: wheat 2px solid;
+    border-radius: 0 0 100% 100%;
+    margin-top: 10%;
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+
+
+.cinema:active{
+    background-color: #ff6666;
+}
+
