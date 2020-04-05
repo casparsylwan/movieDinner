@@ -26,7 +26,7 @@
 
 .down{
     
-    height: 20rem;
+    height: 15rem;
     width: 100%;
     
     overflow: auto;
@@ -76,6 +76,7 @@ span{
 }
 
 input{
+    margin-left: 3rem;
     border-radius: 5px;
 }
 
