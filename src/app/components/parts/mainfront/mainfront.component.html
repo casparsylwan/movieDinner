@@ -18,24 +18,26 @@
 
     <!--[(ngModel)]="tickets"-->
     <div *ngIf="(state==1)" class="howmany">
-        <span *ngIf="!(numberOfTicketChoosen)">{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr <br/>  {{ orderText[2]}} </span>
-        <div *ngIf="!(numberOfTicketChoosen)" class="btn-input">
+        <span *ngIf="(dateSetBoolean)">{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr <br/>  {{ orderText[2]}} </span>
+        <div *ngIf=" (dateSetBoolean)" class="btn-input">
             <input type="number" class="numberOfTickets" min="1" max="20" value="1" [(ngModel)]="tickets" />
             <button (click)="getNumberOfTickets()" class="tickets">
                 skicka
             </button>            
         </div>
         <div class="date-box">
-            <input  *ngIf="(numberOfTicketChoosen)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
-            <button *ngIf="(numberOfTicketChoosen)" class="tickets" (click)="setDateAndTime()"> 
+            <input  *ngIf="!(dateSetBoolean)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
+            <!--
+            <button *ngIf="!(dateSetBoolean)" class="tickets" (click)="setDateAndTime()"> 
                    Skicka 
             </button>
+            -->
         </div>
     </div>
-    <div *ngIf="(state==1) && (numberOfTicketChoosen)"
+    <div *ngIf="(state==1) && !(dateSetBoolean)"
          class="showtime">
             
-            <span *ngFor="let time of showTmes"> {{ time }}:00</span>
+            <span (click)="setDateAndTime(i)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
         </div>
     <div class="video">
         

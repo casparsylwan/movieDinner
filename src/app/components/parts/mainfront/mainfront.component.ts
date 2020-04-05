@@ -20,6 +20,7 @@ export class MainfrontComponent implements OnInit {
 
   //State booleans
   numberOfTicketChoosen:boolean = false;
+  dateSetBoolean:boolean;
 
   fronttext:string = "Boka din film, middag och godis idag!"
   orderText:string[] = ["Biljetter till ", "Kostar", "Hur många är ni?"];
@@ -41,8 +42,9 @@ export class MainfrontComponent implements OnInit {
     this.numberOfTicketChoosen = true; 
   }
 
-  setDateAndTime(){
-    console.log("Ska implenteras");
+  setDateAndTime(i:number){
+    console.log(i +" " + this.movieDate );
+    this.dateSetBoolean = true;
   }
 
   public stateChangeMainTop(){
