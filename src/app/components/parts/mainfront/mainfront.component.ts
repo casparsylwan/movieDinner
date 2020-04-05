@@ -16,7 +16,7 @@ export class MainfrontComponent implements OnInit {
   ticketprice:number;
 
   fronttext:string = "Boka din film, middag och godis idag!"
-  orderText:string = "Antal biljetter till ";
+  orderText:string[] = ["Biljetter till ", "Kostar", "Hur många är ni?"];
 
   state:number = 0;
 

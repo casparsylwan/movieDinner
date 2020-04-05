@@ -18,7 +18,7 @@
 
     <!--[(ngModel)]="tickets"-->
     <div *ngIf="(state==1)" class="howmany">
-        <span>{{ orderText + movieName + " " + ticketprice + " "}} kr</span>
+        <span>{{ orderText[0] + movieName + " "+  orderText[1] + ticketprice + " "}} kr <br/>  {{ orderText[2]}} </span>
         <div class="btn-input">
         <input type="number" class="numberOfTickets" min="1" max="20" value="1"  />
             <button (click)="getNumberOfTickets()" class="tickets">

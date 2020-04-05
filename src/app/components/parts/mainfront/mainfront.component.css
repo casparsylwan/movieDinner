@@ -72,6 +72,8 @@ img:active{
 span{
     color: #f11111;
     font-weight: bold;
+    text-align: center;
+    line-height: 1rem;
 
 }
 
@@ -89,6 +91,8 @@ input{
     border-radius: 20px;
     background-color: #fff;
 }
+
+
 
 .howmay{
     margin: 0 auto;
