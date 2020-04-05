@@ -4,7 +4,9 @@
 
 .moviebox{
 
-    
+    position: relative;
+    z-index: 1;
+    width: 100vw;
     background-color: #111;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -12,28 +14,24 @@
     display: grid;
     grid-row-gap: 0.5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    
     align-items: center;
     
 
 }
 
-.seatsheading{
-    margin-top: 8rem;
-    width: 100%;
-    background-color: #111;
-    border: 2px solid #fff;
-    
-    
-}
 
-.seatsheading h2{
-
-    color: #fff;
-    padding-top: 2rem;
-    font-size: 1.5rem;
+.screen{
+    position: relative;
     text-align: center;
-
+    width: 80%;
+    height: 10rem;
+    border: #f11111 1px double;
+    background-color: #FFF;
+    margin:0 auto;
+    margin-bottom: -3rem;
+    transform: perspective(400px) rotateX(-40deg);
+    
 }
 
 .cinema{
@@ -43,6 +41,7 @@
     border-radius: 10px;
     height: 3rem;
     width: 3rem;
+    margin-top: 1rem;
     
 
     align-self: center;
@@ -52,27 +51,24 @@
 
 .cinema:nth-child(4n-3){
     transform: rotate(20deg);
+    margin-top: -3rem;
     
 }
 
 .cinema:nth-child(4n-2){
     transform: rotate(10deg);
+   
 }
 
 .cinema:nth-child(4n-1){
     transform: rotate(-10deg);
+   
 }
 
 .cinema:nth-child(4n){
     transform: rotate(-20deg);
-}
-
-.cinema:nth-child( 2){
-    margin-top: 6rem;
-}
-
-.cinema:nth-child(3){
-    margin-top: 6rem;
+    margin-top: -3rem;
+    
 }
 
 

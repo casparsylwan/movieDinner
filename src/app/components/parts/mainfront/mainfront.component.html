@@ -1,5 +1,5 @@
 <div class="wraper">
-    <div [ngStyle]="stateChangeMainTop()" class="top">
+    <div *ngIf="!(numberOfTicketChoosen)" [ngStyle]="stateChangeMainTop()" class="top">
         <h2>
             {{ fronttext }}
         </h2>
@@ -7,7 +7,7 @@
 
 <!------------------Order tickets starts here------------------------>
 
-    <div class="down">
+    <div class="down" *ngIf="!(numberOfTicketChoosen)">
 
         <div class="rigth" *ngFor="let img of movieInfo.movies; let i = index">
             <span (click)="showTrailer(i)">
@@ -17,7 +17,7 @@
     </div>
 
     <!--[(ngModel)]="tickets"-->
-    <div *ngIf="(state==1)" class="howmany">
+    <div *ngIf="(state==1) && !(numberOfTicketChoosen)" class="howmany">
         <span *ngIf="(dateSetBoolean)">{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr <br/>  {{ orderText[2]}} </span>
         <div *ngIf=" (dateSetBoolean)" class="btn-input">
             <input type="number" class="numberOfTickets" min="1" max="20" value="1" [(ngModel)]="tickets" />
@@ -39,9 +39,9 @@
             
             <span (click)="setDateAndTime(i)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
         </div>
-    <div class="video">
+    <div *ngIf="!(numberOfTicketChoosen)" class="video">
         
-            <div *ngIf="(state==1)" class="iframe">
+            <div *ngIf="(state==1) && !(numberOfTicketChoosen)" class="iframe">
                 <iframe [src]="urlSafe" frameborder="0" allow="accelerometer;
              autoplay;
              encrypted-media; 
@@ -51,5 +51,6 @@
 
             </div>
         </div>
+        <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean)"></app-seats>
         <app-footer></app-footer>
     </div>

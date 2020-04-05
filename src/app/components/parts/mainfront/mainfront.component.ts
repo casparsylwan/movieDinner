@@ -40,6 +40,7 @@ export class MainfrontComponent implements OnInit {
   getNumberOfTickets(){
     console.log("Ska implenteras");
     this.numberOfTicketChoosen = true; 
+  //  this.state = 0;
   }
 
   setDateAndTime(i:number){
