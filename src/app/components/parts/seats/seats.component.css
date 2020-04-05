@@ -1,21 +1,16 @@
 
 
-input{
-    border: #000 solid 2px;
-}
+
 
 .moviebox{
 
     
     background-color: #111;
-    padding-left: 30%;
-    padding-right: 10%;
-    padding-bottom: 10rem;
-    padding-top: 10rem;
-
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     display: grid;
-    grid-row-gap: 3rem;
+    grid-row-gap: 0.5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     align-items: center;
@@ -24,10 +19,11 @@ input{
 }
 
 .seatsheading{
-
+    margin-top: 8rem;
     width: 100%;
     background-color: #111;
-    padding-bottom:  2rem;
+    border: 2px solid #fff;
+    
     
 }
 
@@ -35,7 +31,7 @@ input{
 
     color: #fff;
     padding-top: 2rem;
-    font-size: xx-large;
+    font-size: 1.5rem;
     text-align: center;
 
 }
@@ -45,8 +41,8 @@ input{
     border: solid #fff 3px;
     border-top: 6px #ff3333 solid;
     border-radius: 10px;
-    height: 10rem;
-    width: 10rem;
+    height: 3rem;
+    width: 3rem;
     
 
     align-self: center;
@@ -54,13 +50,44 @@ input{
 
 }
 
+.cinema:nth-child(4n-3){
+    transform: rotate(20deg);
+    
+}
+
+.cinema:nth-child(4n-2){
+    transform: rotate(10deg);
+}
+
+.cinema:nth-child(4n-1){
+    transform: rotate(-10deg);
+}
+
+.cinema:nth-child(4n){
+    transform: rotate(-20deg);
+}
+
+.cinema:nth-child( 2){
+    margin-top: 6rem;
+}
+
+.cinema:nth-child(3){
+    margin-top: 6rem;
+}
+
 
 .cinema p{
 
     color: #fff;
-    padding-top: 2rem;
-    font-size: xx-large;
+    padding-top: 1rem;
+    font-size: large;
     text-align: center;
+
+}
+
+.cinema:nth-child(4n-3) p{
+    padding-top: 0rem;
+    
 
 }
 
@@ -68,7 +95,7 @@ input{
 
     border: wheat 2px solid;
     border-radius: 0 0 100% 100%;
-    margin-top: 10%;
+    margin-top: 20%;
     width: 100%;
     height: 90%;
     margin: 0 auto;
@@ -76,7 +103,4 @@ input{
 
 
 
-.cinema:active{
-    background-color: #ff6666;
-}
 
