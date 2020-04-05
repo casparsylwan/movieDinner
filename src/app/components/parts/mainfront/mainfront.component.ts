@@ -15,6 +15,11 @@ export class MainfrontComponent implements OnInit {
   movieInfo:movies = new movies();
   ticketprice:number;
   tickets: number = 1;
+  showTmes:string[];
+  movieDate:string =  "2020-04-25";
+
+  //State booleans
+  numberOfTicketChoosen:boolean = false;
 
   fronttext:string = "Boka din film, middag och godis idag!"
   orderText:string[] = ["Biljetter till ", "Kostar", "Hur många är ni?"];
@@ -27,9 +32,16 @@ export class MainfrontComponent implements OnInit {
     this.state = 1;
     this.movieName =  this.movieInfo.movies[i].name;
     this.ticketprice = this.movieInfo.movies[i].price
+    this.showTmes = this.movieInfo.movies[i].date
+    
   }
 
   getNumberOfTickets(){
+    console.log("Ska implenteras");
+    this.numberOfTicketChoosen = true; 
+  }
+
+  setDateAndTime(){
     console.log("Ska implenteras");
   }
 

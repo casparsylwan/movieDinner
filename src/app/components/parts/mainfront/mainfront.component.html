@@ -18,14 +18,25 @@
 
     <!--[(ngModel)]="tickets"-->
     <div *ngIf="(state==1)" class="howmany">
-        <span>{{ orderText[0] + movieName + " "+  orderText[1] + ticketprice + " "}} kr <br/>  {{ orderText[2]}} </span>
-        <div class="btn-input">
-        <input type="number" class="numberOfTickets" min="1" max="20" value="1" [(ngModel)]="tickets" />
+        <span *ngIf="!(numberOfTicketChoosen)">{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr <br/>  {{ orderText[2]}} </span>
+        <div *ngIf="!(numberOfTicketChoosen)" class="btn-input">
+            <input type="number" class="numberOfTickets" min="1" max="20" value="1" [(ngModel)]="tickets" />
             <button (click)="getNumberOfTickets()" class="tickets">
-            skicka
-        </button>
+                skicka
+            </button>            
+        </div>
+        <div class="date-box">
+            <input  *ngIf="(numberOfTicketChoosen)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
+            <button *ngIf="(numberOfTicketChoosen)" class="tickets" (click)="setDateAndTime()"> 
+                   Skicka 
+            </button>
         </div>
     </div>
+    <div *ngIf="(state==1) && (numberOfTicketChoosen)"
+         class="showtime">
+            
+            <span *ngFor="let time of showTmes"> {{ time }}:00</span>
+        </div>
     <div class="video">
         
             <div *ngIf="(state==1)" class="iframe">
