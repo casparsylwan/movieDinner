@@ -14,6 +14,7 @@ export class MainfrontComponent implements OnInit {
   movieName:string="";
   movieInfo:movies = new movies();
   ticketprice:number;
+  tickets: number = 1;
 
   fronttext:string = "Boka din film, middag och godis idag!"
   orderText:string[] = ["Biljetter till ", "Kostar", "Hur många är ni?"];
