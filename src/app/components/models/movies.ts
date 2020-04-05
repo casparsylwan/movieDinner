@@ -7,7 +7,7 @@ export class movies{
         {
             img : "https://m.media-amazon.com/images/M/MV5BOGYyNWQ1MDItYzFjNC00NmVjLTlkZDQtNDg0YmI1YzAzYjVkXkEyXkFqcGdeQXVyMTMwOTMzNzU@._V1_.jpg",
             name : "Alfons Åberg",
-            trailer : "https://www.youtube.com/embed/silNG6IFiRQ",
+            trailer : "https://www.youtube.com/embed/46KAmd6MEDI",
             price : 65
         },
             
