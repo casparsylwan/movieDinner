@@ -8,9 +8,12 @@ import { movies } from '../../models/movies'
   styleUrls: ['./mainfront.component.css']
 })
 export class MainfrontComponent implements OnInit {
+
+  //Movie info variables
   urlSafe: SafeResourceUrl;
   movieName:string="";
   movieInfo:movies = new movies();
+  ticketprice:number;
 
   fronttext:string = "Boka din film, middag och godis idag!"
   orderText:string = "Antal biljetter till ";
@@ -22,6 +25,7 @@ export class MainfrontComponent implements OnInit {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl( this.movieInfo.movies[i].trailer);
     this.state = 1;
     this.movieName =  this.movieInfo.movies[i].name;
+    this.ticketprice = this.movieInfo.movies[i].price
   }
 
   getNumberOfTickets(){
