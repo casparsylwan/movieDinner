@@ -18,6 +18,33 @@ export class RestaurantComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  public buyCandy(candy:any){
+
+    console.log(candy[1]);
+    /*
+    this.customers[this.seat].candy.push(candy[0]);
+    this.customers[this.seat].sum = candy[1] + this.customers[this.seat].sum; 
+    this.customersEvent.emit(this.customers);
+    */
+  }
+
+  public removeCandy(candy:any){
+
+    console.log(candy[1]);
+    /*
+    let index = this.customers[this.seat].candy.indexOf(candy[0]);
+    if(index != -1){
+      this.customers[this.seat].candy.splice(index, 1);
+      this.customers[this.seat].sum = this.customers[this.seat].sum - candy[1];
+      this.customersEvent.emit(this.customers);
+    }
+    
+    console.log(this.customers[this.seat]);
+    */
+  }
+
+
   public buyFood(food:any){
 
   /*  
