@@ -1,17 +1,72 @@
 .wraper{
+    
+    padding: 10%;
     margin-top: 4rem;
-    background-color: #00f;
-}
-
-.container{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 3rem;
+    background-color: #fa4;
     width: 100vw;
-    background-color: #ffaa44;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100vh;
 }
+ 
+  .card {
+    width: 80vw;
+    height: 30rem;
+    position: relative;
+    transition: transform 3s;
+  }
+  
+  .card-front, .card-back, .card-candy{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: transform 3s, margin-left 2s;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      text-align: center;
+
+  }
+
+  .card-back{
+
+    background-color: #aaa;
+
+  }
+
+  .card-front{
+
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  .card-candy{
+    background-color: #f00;
+    z-index: -1;
+  }
+
+  .card:hover .card-front{
+    margin-left: 85vw;  
+    transform: perspective(400px) rotateY(180deg);
+  }
+
+  .card:active .card-front, .card:active .card-back{
+
+    margin-left: 85vw;  
+    transform: perspective(400px) rotateY(180deg);
+
+  }
+
+  
+  
+
+
+
+
+
+
+/*
 
 h2{
     font-size: 2rem;
@@ -71,3 +126,4 @@ span{
 .minus{
     background-color: #00f;
 }
+*/
