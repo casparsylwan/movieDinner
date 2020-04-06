@@ -1,16 +1,18 @@
+
 .wraper{
     
    display: flex;
    align-items: flex-start;
    justify-content: center;
-    margin-top: 4rem;    
-    background-color: #fb1;
-    width: 100%;
-    min-height: 110vh;
+   margin-top: 4rem;    
+   background-color: #f1a900;
+   width: 100%;
+   min-height: 110vh;
     
     
 }
- 
+
+
 .scene {
     
     width: 90%;   
