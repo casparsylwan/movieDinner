@@ -1,6 +1,5 @@
 <nav class="sidebar" 
-    [ngStyle]="{'opacity':  (spinTheLines) ?  '0' :  '1',
-                'marginLeft':  (spinTheLines) ? '100%' : '0px', 
+    [ngStyle]="{'marginLeft':  (spinTheLines) ? '100%' : '0px', 
                 'transition':  (spinTheLines) ?   'opacity ease-in 500ms 0ms' : 'opacity ease-in 300ms 0ms'}">
     <div class="cover animated slideInRight"
         [ngStyle]="{'marginLeft': (spinTheLines) ? '130vw' : '0px',
@@ -13,3 +12,9 @@
         </ul>
     </div>
 </nav>
+
+<!--
+
+    'opacity':  (spinTheLines) ?  '0' :  '1',
+
+-->
