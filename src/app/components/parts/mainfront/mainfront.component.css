@@ -81,7 +81,7 @@ span{
 }
 
 input{
-    margin-left: 3rem;
+    
     border-radius: 5px;
 }
 
@@ -123,6 +123,10 @@ input{
     font-size: 1.2rem;
     font-style: italic;
     color: #fff;
+}
+
+.date-box{
+    margin: 0 auto;   
 }
 
 

@@ -27,11 +27,6 @@
         </div>
         <div class="date-box">
             <input  *ngIf="!(dateSetBoolean)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
-            <!--
-            <button *ngIf="!(dateSetBoolean)" class="tickets" (click)="setDateAndTime()"> 
-                   Skicka 
-            </button>
-            -->
         </div>
     </div>
     <div *ngIf="(state==1) && !(dateSetBoolean)"
