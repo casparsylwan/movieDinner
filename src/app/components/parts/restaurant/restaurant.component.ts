@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantComponent implements OnInit {
 
+  state:number=0;
+
   foodList: any[][] = [["Hamburgare",65], ["Vegodelux", 85], ["Pizza", 97], ["Padthai",65]];
 
   drinkList: any[][] = [["Zingo", 20], ["Pepsi", 25 ],["Cuba-Cola", 15], ["Juice", 10]];
@@ -23,16 +25,27 @@ export class RestaurantComponent implements OnInit {
 
   isFliped:string = "card";
 
-  flip(){
+  flip(state:number){
+
+    this.state = state;
 
     if(this.isFliped === "card"){
       this.isFliped = "card is-flipped";
     }else{
       this.isFliped="card"
     }
-    
-
   }
+
+ public changeState(state:number){
+
+  this.state = state;
+
+  console.log(state);
+  this.isFliped = "card is-Spinning";
+
+  console.log(this.isFliped);
+
+ }
 
   
   public buyCandy(candy:any){
@@ -63,6 +76,8 @@ export class RestaurantComponent implements OnInit {
 
   public buyFood(food:any){
 
+    console.log(food[1])
+
   /*  
     this.customers[this.seat].food.push(food[0]);
     this.customers[this.seat].sum = this.customers[this.seat].sum + food[1];
@@ -92,6 +107,8 @@ export class RestaurantComponent implements OnInit {
 
   public buyDrinks(drinks:any){
 
+    console.log(drinks[1])
+
     /*
     this.customers[this.seat].drinks.push(drinks[0]);
     this.customers[this.seat].sum = this.customers[this.seat].sum + drinks[1];
@@ -101,6 +118,8 @@ export class RestaurantComponent implements OnInit {
   }
 
   public removeDrinks(drinks:any){
+
+    console.log(drinks[1])
 
     /*
     let index = this.customers[this.seat].drinks.indexOf(drinks[0]);
