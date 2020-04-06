@@ -31,6 +31,7 @@
     margin:0 auto;
     margin-bottom: -3rem;
     transform: perspective(400px) rotateX(-40deg);
+    z-index: 1;
     
 }
 
