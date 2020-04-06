@@ -13,6 +13,7 @@ import { FooterComponent } from './components/parts/footer/footer.component';
 import { SeatsComponent } from './components/parts/seats/seats.component';
 
 import { ClickColorDirective } from './components/models/click-color';
+import { RestaurantComponent } from './components/parts/restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ClickColorDirective } from './components/models/click-color';
     MainfrontComponent,
     FooterComponent,
     SeatsComponent,
-    ClickColorDirective
+    ClickColorDirective,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
