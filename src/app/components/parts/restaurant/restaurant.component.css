@@ -5,6 +5,7 @@
     background-color: #fa4;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
  
   .card {
@@ -47,13 +48,13 @@
   }
 
   .card:hover .card-front{
-    margin-left: 85vw;  
+    margin-left: 100vw;  
     transform: perspective(400px) rotateY(180deg);
   }
 
   .card:active .card-front, .card:active .card-back{
 
-    margin-left: 85vw;  
+    margin-left: 100vw;  
     transform: perspective(400px) rotateY(180deg);
 
   }
