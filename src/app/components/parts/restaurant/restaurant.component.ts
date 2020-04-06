@@ -13,9 +13,25 @@ export class RestaurantComponent implements OnInit {
 
   candyList: any[][] = [["Bilar", 20 ],["Hallon båtar ", 15 ], [" Popcorn XXL", 35 ],["Popcorn Medium", 15 ], ["Popcorn liten", 15 ]]
 
+  resturantHeading:string = "Mat, dryck och godis"
+  subHeading:string ="Beställ mat till stol:";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  isFliped:string = "card";
+
+  flip(){
+
+    if(this.isFliped === "card"){
+      this.isFliped = "card is-flipped";
+    }else{
+      this.isFliped="card"
+    }
+    
+
   }
 
   

@@ -1,14 +1,26 @@
-<div class="wraper animated slideInDown">
-    <div class="card">
-        <div class="card-front">
-            1
-        </div> 
-        <div class="card-back">
-            2
+<div class="wraper">
+    <div class="scene">
+       <div (click)="flip()" [class]="isFliped" class="card">
+          <div class="card-face card-facefront">
+            <h2>
+                {{ resturantHeading }}
+            </h2>
+            <h3>{{ subHeading }}</h3>
+            <div class="btn">
+                {{ "Mat"  }}
+            </div>
+            <div class="btn">
+                {{ "Drycker"  }}
+            </div>
+            <div class="btn">
+                {{ "Godis"  }}
+            </div>
+
+
+
+          </div>
+          <div class="card-face card-faceback">back</div>
         </div>
-        <div class="card-candy">
-            3           
-        </div>          
     </div>
 </div>
     
