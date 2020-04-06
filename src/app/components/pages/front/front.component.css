@@ -1,8 +1,18 @@
+::ng-deep body,
+::ng-deep html {
+  height:100%;
+  margin: 0;
+}
+
+.back {
+  height: 100%;
+}
+
 .wraper{
 
-    height: 100%;
+
     width: 100vw;
     background-color: #f1a900;
-    min-height: 100%;
+    
 }
 
