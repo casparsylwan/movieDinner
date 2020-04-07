@@ -8,6 +8,7 @@ import { Customer } from '../../models/customer';
 })
 export class FrontComponent implements OnInit {
   customers:Customer[];
+  seatsTakenBool:boolean;
 
   constructor() { }
 

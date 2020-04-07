@@ -5,9 +5,10 @@
 <div class="wraper">
     <app-mainfront
     (customersEvent)="customers=$event"
+    (seatsTakenEvent)="seatsTakenBool=$event"
     ></app-mainfront>
     <app-restaurant
-    *ngIf="customers!=null"
+    *ngIf="(seatsTakenBool)"
     [customers] = "customers"
     ></app-restaurant>
 </div>

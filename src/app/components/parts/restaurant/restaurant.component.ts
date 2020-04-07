@@ -7,7 +7,11 @@ import { Customer } from '../../models/customer';
   styleUrls: ['./restaurant.component.css']
 })
 export class RestaurantComponent implements OnInit {
+
+  //Customer info
   @Input() customers:Customer[];
+  seat:number = -1;
+  id:number = -1;
 
   state:number=0;
 
@@ -18,7 +22,7 @@ export class RestaurantComponent implements OnInit {
   candyList: any[][] = [["Bilar", 20 ],["Hallon båtar ", 15 ], [" Popcorn XXL", 35 ],["Popcorn Medium", 15 ], ["Popcorn liten", 15 ]]
 
   resturantHeading:string = "Mat, dryck och godis"
-  subHeading:string ="Beställ mat till stol:";
+  subHeading:string ="Välj stol att beställa mat till!";
 
   constructor() { }
 
@@ -47,6 +51,15 @@ export class RestaurantComponent implements OnInit {
 
   console.log(this.isFliped);
 
+ }
+
+ public getCustomer(seat:number, index:number){
+   
+   this.seat = seat;
+   this.id = index;
+   this.subHeading = "Beställ mat till stol:" + seat;
+   
+   
  }
 
   

@@ -167,6 +167,7 @@ span{
   background-color: #f00;
   font-weight: bold;
   font-size: large;
+  margin-top: 1rem;
   color: #ff1;
   border: 1px double black;
   padding: 4px;

@@ -10,6 +10,7 @@ import { Customer } from '../../models/customer';
 })
 export class MainfrontComponent implements OnInit {
   @Output() customersEvent = new EventEmitter();
+  @Output() seatsTakenEvent = new EventEmitter();
 
 
   //Customer object 
@@ -91,6 +92,9 @@ export class MainfrontComponent implements OnInit {
 
   public printer(){  
     this.customersEvent.emit(this.customers);
+    
+    setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
+    console.log(this.seatsTakenBool)
   }
 
   constructor(public sanitizer: DomSanitizer) { }
