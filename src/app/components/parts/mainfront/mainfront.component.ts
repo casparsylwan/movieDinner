@@ -56,6 +56,7 @@ export class MainfrontComponent implements OnInit {
       customer.movie = this.movieName;
       customer.date = this.movieDate;
       customer.orderList.push({name:this.movieName, price:this.ticketprice});
+      customer.calcOrderSum()
       this.customers.push(customer);
     }
     this.customers.forEach(e => console.log(e.movie) );

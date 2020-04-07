@@ -15,11 +15,11 @@ export class RestaurantComponent implements OnInit {
 
   state:number=0;
 
-  foodList: any[][] = [["Hamburgare",65], ["Vegodelux", 85], ["Pizza", 97], ["Padthai",65]];
+  foodList:{name:string, price:number}[] = [{name:"Hamburgare",price: 65}, {name:"Vegodelux", price: 85}, {name:"Pizza", price: 97}, {name:"Padthai",price:65}];
 
-  drinkList: any[][] = [["Zingo", 20], ["Pepsi", 25 ],["Cuba-Cola", 15], ["Juice", 10]];
+  drinkList: {name:string, price:number}[] = [{name:"Zingo", price:20}, {name:"Pepsi", price:25 },{name:"Cuba-Cola",price: 15}, {name:"Juice", price:10}];
 
-  candyList: any[][] = [["Bilar", 20 ],["Hallon båtar ", 15 ], [" Popcorn XXL", 35 ],["Popcorn Medium", 15 ], ["Popcorn liten", 15 ]]
+  candyList:{name:string, price:number}[] = [{name:"Bilar", price:20 },{name:"Hallon båtar ", price:15 }, {name:"Popcorn XXL", price:35 },{name:"Popcorn Medium", price:15 }, {name:"Popcorn liten", price:15 }]
 
   resturantHeading:string = "Mat, dryck och godis"
   subHeading:string ="Välj stol att beställa mat till!";
@@ -65,25 +65,26 @@ export class RestaurantComponent implements OnInit {
   
   public buyCandy(candy:any){
 
-    console.log(candy[1]);
-    /*
-    this.customers[this.seat].candy.push(candy[0]);
-    this.customers[this.seat].sum = candy[1] + this.customers[this.seat].sum; 
-    this.customersEvent.emit(this.customers);
-    */
+    console.log(candy);
+    console.log(this.customers )
+    console.log(this.customers[this.id].orderList)
+    this.customers[this.id].orderList.push(candy);
+    this.customers[this.id].calcOrderSum(); 
+  //  this.customersEvent.emit(this.customers);
+    
   }
 
   public removeCandy(candy:any){
 
-    console.log(candy[1]);
-    /*
-    let index = this.customers[this.seat].candy.indexOf(candy[0]);
-    if(index != -1){
-      this.customers[this.seat].candy.splice(index, 1);
-      this.customers[this.seat].sum = this.customers[this.seat].sum - candy[1];
-      this.customersEvent.emit(this.customers);
-    }
+    console.log(candy);
     
+    let index = this.customers[this.id].orderList.indexOf(candy);
+    if(index != -1){
+      this.customers[this.id].orderList.splice(index, 1);
+      this.customers[this.seat].calcOrderSum();
+    //  this.customersEvent.emit(this.customers);
+    }
+    /*
     console.log(this.customers[this.seat]);
     */
   }
@@ -91,60 +92,57 @@ export class RestaurantComponent implements OnInit {
 
   public buyFood(food:any){
 
-    console.log(food[1])
+    this.customers[this.id].orderList.push(food);
+    this.customers[this.id].calcOrderSum();
+    
+ //  this.customersEvent.emit(this.customers); 
 
-  /*  
-    this.customers[this.seat].food.push(food[0]);
-    this.customers[this.seat].sum = this.customers[this.seat].sum + food[1];
-    console.log(this.customers[this.seat]);
-    this.customersEvent.emit(this.customers); 
-
-    */
+    
     
   }
 
   public removeFood(food:any){
 
     console.log(food);
-/*
-    let index = this.customers[this.seat].food.indexOf(food[0]);
+
+    let index = this.customers[this.id].orderList.indexOf(food);
     console.log(index);
     if(index !=-1){
 
-      this.customers[this.seat].food.splice( index, 1);
-      this.customers[this.seat].sum = this.customers[this.seat].sum - food[1];
-      console.log(this.customers[this.seat]);
-      this.customersEvent.emit(this.customers);
+      this.customers[this.id].orderList.splice( index, 1);
+      this.customers[this.id].calcOrderSum();
+      
+    //  this.customersEvent.emit(this.customers);
     }
     
-    */
+    
   }
 
   public buyDrinks(drinks:any){
 
-    console.log(drinks[1])
+    console.log(drinks)
 
-    /*
-    this.customers[this.seat].drinks.push(drinks[0]);
-    this.customers[this.seat].sum = this.customers[this.seat].sum + drinks[1];
-    console.log(this.customers[this.seat]);
-    this.customersEvent.emit(this.customers);
-    */
+    
+    this.customers[this.id].orderList.push(drinks);
+    this.customers[this.id].calcOrderSum();
+    
+  //  this.customersEvent.emit(this.customers);
+    
   }
 
   public removeDrinks(drinks:any){
 
-    console.log(drinks[1])
+    console.log(drinks)
 
-    /*
-    let index = this.customers[this.seat].drinks.indexOf(drinks[0]);
+    
+    let index = this.customers[this.id].orderList.indexOf(drinks);
     if(index != -1){
-      this.customers[this.seat].drinks.splice(index, 1);
-      this.customers[this.seat].sum = this.customers[this.seat].sum - drinks[1];
+      this.customers[this.id].orderList.splice(index, 1);
+      this.customers[this.id].calcOrderSum();
     }
-    console.log(this.customers[this.seat]);
-    this.customersEvent.emit(this.customers);
-    */
+    
+  //  this.customersEvent.emit(this.customers);
+    
   }
 
   

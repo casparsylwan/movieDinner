@@ -10,6 +10,12 @@ export class Customer{
     food?:string[] = new Array();;
     drinks?:string[] = new Array();
     orderList:{name:string, price:number}[] = new Array();
-    totalSum:number;
+    totalSum:number = 0;
+
+    calcOrderSum(){
+        this.totalSum = 0;
+        this.orderList.forEach(order =>  this.totalSum = order.price + this.totalSum);
+        console.log(this.totalSum);
+    }
 
 }
