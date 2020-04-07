@@ -8,7 +8,7 @@
    background-color: #f1a900;
    width: 100%;
    min-height: 100vh;
-    
+   animation: spinning 2s 1;
     
 }
 

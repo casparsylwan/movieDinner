@@ -1,9 +1,10 @@
-<div class="wraper">
+<div [class]="wraper">
 
-    <div class="screen">The Show will begin<br/> Välj era sitt platser! </div>
+    <div class="screen">The Show will begin<br/> Välj era {{ numberOfSeats }} sittplatser! 
+        <div *ngFor="let seat of seats"> Vald plats är {{ seat }}  </div> 
+    </div>
+    
     <div class="moviebox animated fadeIn">
-        <!--*ngIf="!setSeats"-->
-
         
         <div class="cinema" *ngFor="let seat of ' '.repeat(20).split(''); index as i" (click)="getSeats( i+1)">
             <div class="seat" clickColor [color]="'red'">
@@ -15,4 +16,3 @@
         </div>
     </div>
 </div>
-<!--clickColor [color] = "'red'"-->

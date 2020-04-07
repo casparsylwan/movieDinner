@@ -46,6 +46,11 @@
 
             </div>
         </div>
-        <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean)"></app-seats>
+        <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean) && !(seatsTakenBool)"
+                    [customers]="customers"
+                    [seatsTakenBool]="seatsTakenBool"
+                    (customersEvent)="customers=$event"
+                    (seatsTakenEvent)="seatsTakenBool=$event"
+                    (click)="printer()"></app-seats>
         <app-footer></app-footer>
     </div>

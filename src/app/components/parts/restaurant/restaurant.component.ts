@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Customer } from '../../models/customer';
 
 @Component({
   selector: 'app-restaurant',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restaurant.component.css']
 })
 export class RestaurantComponent implements OnInit {
+  @Input() customers:Customer[];
 
   state:number=0;
 
@@ -26,7 +28,7 @@ export class RestaurantComponent implements OnInit {
   isFliped:string = "card";
 
   flip(state:number){
-
+    console.log(this.customers);
     this.state = state;
 
     if(this.isFliped === "card"){

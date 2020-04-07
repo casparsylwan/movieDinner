@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  Output, EventEmitter } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { movies } from '../../models/movies'
+import { movies } from '../../models/movies';
+import { Customer } from '../../models/customer';
 
 @Component({
   selector: 'app-mainfront',
@@ -8,6 +9,12 @@ import { movies } from '../../models/movies'
   styleUrls: ['./mainfront.component.css']
 })
 export class MainfrontComponent implements OnInit {
+  @Output() customersEvent = new EventEmitter();
+
+
+  //Customer object 
+  customers:Customer[] = new Array();
+
 
   //Movie info variables
   urlSafe: SafeResourceUrl;
@@ -21,6 +28,7 @@ export class MainfrontComponent implements OnInit {
   //State booleans
   numberOfTicketChoosen:boolean = false;
   dateSetBoolean:boolean;
+  seatsTakenBool:boolean = false;
 
   fronttext:string = "Boka din film, middag och godis idag!"
   orderText:string[] = ["Biljetter till ", "Kostar", "Hur många är ni?"];
@@ -38,9 +46,19 @@ export class MainfrontComponent implements OnInit {
   }
 
   getNumberOfTickets(){
-    console.log("Ska implenteras");
+    
     this.numberOfTicketChoosen = true; 
-  //  this.state = 0;
+    for(let i=0; i<this.tickets; i++){
+
+      let customer:Customer = new Customer();
+      customer.id = i;
+      customer.movie = this.movieName;
+      customer.date = this.movieDate;
+      customer.orderList.push({name:this.movieName, price:this.ticketprice});
+      this.customers.push(customer);
+    }
+    this.customers.forEach(e => console.log(e.movie) );
+
   }
 
   setDateAndTime(i:number){
@@ -69,6 +87,10 @@ export class MainfrontComponent implements OnInit {
          break; 
       } 
    } 
+  }
+
+  public printer(){  
+    this.customersEvent.emit(this.customers);
   }
 
   constructor(public sanitizer: DomSanitizer) { }

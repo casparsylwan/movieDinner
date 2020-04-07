@@ -1,4 +1,13 @@
+<!--
+
+
+-->
 <div class="wraper">
-    <app-mainfront></app-mainfront>
-    <app-restaurant></app-restaurant>
+    <app-mainfront
+    (customersEvent)="customers=$event"
+    ></app-mainfront>
+    <app-restaurant
+    *ngIf="customers!=null"
+    [customers] = "customers"
+    ></app-restaurant>
 </div>
