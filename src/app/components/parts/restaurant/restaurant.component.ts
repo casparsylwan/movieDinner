@@ -12,6 +12,7 @@ export class RestaurantComponent implements OnInit {
   @Input() customers:Customer[];
   seat:number = -1;
   id:number = -1;
+  totalSum:number;
 
   state:number=0;
 
@@ -70,6 +71,7 @@ export class RestaurantComponent implements OnInit {
     console.log(this.customers[this.id].orderList)
     this.customers[this.id].orderList.push(candy);
     this.customers[this.id].calcOrderSum(); 
+    this.calcTotalSum()
   //  this.customersEvent.emit(this.customers);
     
   }
@@ -82,6 +84,7 @@ export class RestaurantComponent implements OnInit {
     if(index != -1){
       this.customers[this.id].orderList.splice(index, 1);
       this.customers[this.seat].calcOrderSum();
+      this.calcTotalSum()
     //  this.customersEvent.emit(this.customers);
     }
     /*
@@ -94,7 +97,7 @@ export class RestaurantComponent implements OnInit {
 
     this.customers[this.id].orderList.push(food);
     this.customers[this.id].calcOrderSum();
-    
+    this.calcTotalSum()
  //  this.customersEvent.emit(this.customers); 
 
     
@@ -111,7 +114,7 @@ export class RestaurantComponent implements OnInit {
 
       this.customers[this.id].orderList.splice( index, 1);
       this.customers[this.id].calcOrderSum();
-      
+      this.calcTotalSum()
     //  this.customersEvent.emit(this.customers);
     }
     
@@ -125,7 +128,7 @@ export class RestaurantComponent implements OnInit {
     
     this.customers[this.id].orderList.push(drinks);
     this.customers[this.id].calcOrderSum();
-    
+    this.calcTotalSum()
   //  this.customersEvent.emit(this.customers);
     
   }
@@ -141,8 +144,16 @@ export class RestaurantComponent implements OnInit {
       this.customers[this.id].calcOrderSum();
     }
     
+    this.calcTotalSum()
   //  this.customersEvent.emit(this.customers);
     
+  }
+
+  public calcTotalSum(){
+
+    this.totalSum = 0;
+    this.customers.forEach(customer => this.totalSum = this.totalSum + customer.totalSum) 
+
   }
 
   

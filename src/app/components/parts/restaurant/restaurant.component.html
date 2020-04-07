@@ -45,7 +45,7 @@
                         <span>{{ candy.name +" " }}</span><span>{{ candy.price +" kr"  }}</span><span><div (click)="buyCandy(candy)" class="plus">+</div><div (click)="removeCandy(candy)" class="minus">-</div></span>
                     </li>        
                 </ul>
-                <h3 *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>                
+                <h3 *ngIf="(seat!=-1)">Summa att betala bord {{ seat }}: {{ customers[id].totalSum }}</h3>
           </div>
           <div 
             *ngIf="state==2"
