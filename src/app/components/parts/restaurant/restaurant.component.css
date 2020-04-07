@@ -153,4 +153,33 @@ span{
 }
 
 
+/*----Customer----*/
+
+.seats{
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+.seat{
+  border-radius: 100%;
+  background-color: #f00;
+  font-weight: bold;
+  font-size: large;
+  color: #ff1;
+  border: 1px double black;
+  padding: 4px;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 0.7rem;
+  text-align: center;
+}
+
+.seat:nth-child(2n){
+
+  background-color: #00f;
+
+}
+
 

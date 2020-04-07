@@ -5,10 +5,15 @@
             <h2>
                 {{ resturantHeading }}
             </h2>
+            <div class="seats"> 
+                <div class="seat"
+                *ngFor="let customer of customers" > {{ customer.seat }} </div>
+
+            </div>
             <h3>{{ subHeading }}</h3>
             
             <div (click)="flip(1)" class="btn">
-                {{ "Mat"  }}
+                {{ "Mat" | uppercase }}
             </div>
             <div (click)="flip(2)" class="btn">
                 {{ "Drycker"  }}
@@ -23,7 +28,7 @@
           <div class="card-face card-faceback">
 
             <h2>
-                Vilken mat och godis ska till stol: {{ "customers[1].seat" }}
+                Vilken mat och godis ska till stol: {{ customers[1].seat }}
             </h2>
             <div 
                 (click)="flip(0)" 
