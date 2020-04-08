@@ -6,6 +6,7 @@
                 {{ resturantHeading }}
             </h2>
             <h3>{{ subHeading }} </h3>
+            <h3 id="totalsum" *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
             <div class="seats"> 
                 <div class="seat"
                 *ngFor="let customer of customers;let i = index"
@@ -18,20 +19,21 @@
                 {{ "Mat" | uppercase }}
             </div>
             <div (click)="flip(2)" class="btn">
-                {{ "Drycker"  }}
+                {{ "Drycker" | uppercase  }}
             </div>
             <div (click)="flip(3)" class="btn">
-                {{ "Godis"  }}
+                {{ "Godis" | uppercase   }}
             </div>
 
-            <h3 *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
+            
 
           </div>
           <div class="card-face card-faceback">
 
             <h2 *ngIf="(seat!=-1)">
-                Vilken mat och godis ska till stol: {{ customers[id].seat }}
+                Beställning till stol: {{ customers[id].seat }}
             </h2>
+            <h3 *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
             <div 
                 (click)="flip(0)" 
                 class="btn">
@@ -40,34 +42,33 @@
             <div
                 *ngIf="state==3"
                 class="foodlists">
+                <h3>GODIS</h3>
                 <ul>        
                     <li *ngFor="let candy of candyList">
                         <span>{{ candy.name +" " }}</span><span>{{ candy.price +" kr"  }}</span><span><div (click)="buyCandy(candy)" class="plus">+</div><div (click)="removeCandy(candy)" class="minus">-</div></span>
                     </li>        
-                </ul>
-                <h3 *ngIf="(seat!=-1)">Summa att betala bord {{ seat }}: {{ customers[id].totalSum }}</h3>
+                </ul>                
           </div>
           <div 
             *ngIf="state==2"
             class="foodlists">
-            <h3>Dryker </h3>
+            <h3> DRYCKER </h3>            
             <ul>
                 <li *ngFor="let drink of drinkList">
                     <span>{{ drink.name +" "}}</span><span>{{ drink.price+" kr"  }}</span><span><div (click)="buyDrinks(drink)" class="plus">+</div><div (click)="removeDrinks(drink)"  class="minus">-</div></span>
                 </li>
             </ul>
-            <h3 *ngIf="(seat!=-1)" >Summa att betala: {{ customers[id].totalSum }}</h3>
          </div>
          <div  
             *ngIf="state==1"
             class="foodlists">
-            <h3> Mat </h3>
+            <h3> MAT </h3>            
              <ul>
                 <li *ngFor="let food of foodList">
                     <span>{{ food.name +" "}}  </span><span>{{ food.price +" kr"    }}</span><span><div (click)="buyFood(food)"   class="plus">+</div><div (click)="removeFood(food)" class="minus">-</div></span>
                 </li>
             </ul>
-            <h3 *ngIf="(seat!=-1)" >Summa att betala: {{ customers[id].totalSum }}</h3>
+            
         </div>
         </div>
     </div>
@@ -78,43 +79,5 @@
 
 
 
-        <!--+ customers[seat].seat-->
-        <!--
-        <h2>
-            {{ "Vilken mat och godis ska till stol: "  }}
-        </h2>
-        <div class="foodlists">
-            <div class="menu">
-                <h3> Godis </h3>
-                <ul>
-    
-                    <li *ngFor="let candy of candyList">
-                        <span>{{ candy[0] +" " }}</span><span>{{ candy[1]+" kr"  }}</span><span><div (click)="buyCandy(candy)" class="plus">+</div></span><span><div (click) ="removeCandy(candy)" class="minus">-</div></span>
-                    </li>
-    
-                </ul>
-            </div>
-            <div class="menu">
-                <h3>Dryker </h3>
-                <ul>
-    
-                    <li *ngFor="let drink of drinkList">
-                        <span>{{ drink[0] +" "}}</span><span>{{ drink[1]+" kr"  }}</span><span><div (click)="buyDrinks(drink)" class="plus">+</div></span><span><div (click)="removeDrinks(drink)"  class="minus">-</div></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu">
-                <h3>Mat </h3>
-                <ul>
-    
-                    <li *ngFor="let food of foodList">
-                        <span>{{ food[0] +" "}}</span><span> {{ food[1]+" kr" }} </span><span (click)="buyFood(food)" ><div  class="plus">+</div></span><span ><div (click)="removeFood(food)" class="minus">-</div></span>
-                    </li>
-                </ul>
-            </div>
-            <h3>Ssumman: {{  " kr" }}</h3>
-        </div>
-        -->
-        <!--this.customers[this.seat].sum +-->
     
     
