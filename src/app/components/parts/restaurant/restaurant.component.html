@@ -15,13 +15,13 @@
             </div>
             
             
-            <div (click)="flip(1)" class="btn">
+            <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn">
                 {{ "Mat" | uppercase }}
             </div>
-            <div (click)="flip(2)" class="btn">
+            <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
                 {{ "Drycker" | uppercase  }}
             </div>
-            <div (click)="flip(3)" class="btn">
+            <div *ngIf="(seat!=-1)" (click)="flip(3)" class="btn">
                 {{ "Godis" | uppercase   }}
             </div>
             <div (click)="checkoutcustomer()" class="btn checkout">

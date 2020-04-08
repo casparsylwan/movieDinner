@@ -27,7 +27,7 @@ export class RestaurantComponent implements OnInit {
   candyList:{name:string, price:number}[] = [{name:"Bilar", price:20 },{name:"Hallon båtar ", price:15 }, {name:"Popcorn XXL", price:35 },{name:"Popcorn Medium", price:15 }, {name:"Popcorn liten", price:15 }]
 
   resturantHeading:string = "Mat, dryck och godis"
-  subHeading:string ="Välj stol att beställa mat till!";
+  subHeading:string ="Välj stol att beställa till på knappen här under!";
 
   constructor() { }
 
