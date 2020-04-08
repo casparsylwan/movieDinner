@@ -14,6 +14,7 @@ import { SeatsComponent } from './components/parts/seats/seats.component';
 
 import { ClickColorDirective } from './components/models/click-color';
 import { RestaurantComponent } from './components/parts/restaurant/restaurant.component';
+import { CheckoutComponent } from './components/parts/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RestaurantComponent } from './components/parts/restaurant/restaurant.co
     FooterComponent,
     SeatsComponent,
     ClickColorDirective,
-    RestaurantComponent
+    RestaurantComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

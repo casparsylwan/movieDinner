@@ -156,6 +156,10 @@ export class RestaurantComponent implements OnInit {
 
   }
 
+  public checkout(){
+    
+  }
+
   
 
 }
