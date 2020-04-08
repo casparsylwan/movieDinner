@@ -91,9 +91,7 @@ export class RestaurantComponent implements OnInit {
       this.calcTotalSum()
       this.customersEvent.emit(this.customers);
     }
-    /*
-    console.log(this.customers[this.seat]);
-    */
+  
   }
 
 

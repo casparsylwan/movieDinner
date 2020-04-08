@@ -112,9 +112,10 @@
     color: #fff;
     text-shadow: 2px 2px 4px #000000;
     margin: 2rem auto;
-    padding-top: 0.5rem;
+    
     width: 8rem;
     height: 2rem;
+    padding-top: 0.5rem;
     border-radius: 20px;
     text-align: center;
     transition: background-color ease-in 500ms;
@@ -190,29 +191,25 @@ span{
 }
 
 .seat{
-  border-radius: 20px;
-  background-color: #f00;
-  font-weight: bold;
-  font-size: large;
-  margin-top: 1rem;
-  color: #ff1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 1px double black;
-  padding: 4px;
-  width: 4rem;
-  height: 2rem;
-  padding-top: 0.7rem;
-  text-align: center;
-  transition: transform 500ms;
+  width:4rem;
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #f00;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2rem;
+    text-align: center;
+   
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform ease-in 500ms;
 }
 
-.seat:nth-child(2n){
 
-  background-color: #00f;
-
-}
 
 .seat:active{
   transform: scale(0.8);
 }
+
+
 
