@@ -21,6 +21,9 @@ export class SeatsComponent implements OnInit {
 
   //Class variables
   wraper:string = "wraper";
+  screen:string = "screen";
+  moviebox:string = "moviebox animated fadeIn";
+  cinema:string = "cinema";
 
   constructor() { }
 
@@ -52,13 +55,23 @@ export class SeatsComponent implements OnInit {
         this.customers[i].seat = this.seats[i];
       }
       this.customersEvent.emit(this.customers);
-      this.seatsTakenBool = true;
-      this.wraper = "wraper animated flipOut"
-      setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
+      //this.seatsTakenBool = true;
+      //this.wraper = "wraper animated flipOut"
+      //setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
       //this.seatsTakenEvent.emit(this.seatsTakenBool);
     }
-   
 
   }
+
+  public checkout(){
+      this.wraper = "wraper animated flipOut";
+      this.screen = "screen scale-out";
+      this.moviebox = "moviebox scale-out";
+      this.cinema = "cinema scale-out";
+      this.seatsTakenBool = true;
+      this.customersEvent.emit(this.customers);
+      setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
+      console.log("hej");
+    }
 
 }

@@ -8,13 +8,13 @@
             <h3>{{ subHeading }} </h3>
             <h3 id="totalsum" *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
             <div class="seats"> 
-                <button class="seat"
+                <div class="btn checkout"
                 *ngFor="let customer of customers;let i = index"
-                (click)="getCustomer(customer.seat, i )" > stol  {{ customer.seat }} </button>
-
-            </div>
-            
-            
+                (click)="getCustomer(customer.seat, i )" > 
+                beställ till stol
+                {{ customer.seat }} 
+                </div>
+            </div>            
             <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn">
                 {{ "Mat" | uppercase }}
             </div>
@@ -27,9 +27,6 @@
             <div (click)="checkoutcustomer()" class="btn checkout">
                 {{ "Gå till kassan" | uppercase   }}
             </div>
-
-            
-
           </div>
           <div class="card-face card-faceback">
 
@@ -70,8 +67,7 @@
                 <li *ngFor="let food of foodList">
                     <span>{{ food.name +" "}}  </span><span>{{ food.price +" kr"    }}</span><span *ngIf="id!=-1" ><div (click)="buyFood(food)"   class="plus">+</div><div (click)="removeFood(food)" class="minus">-</div></span>
                 </li>
-            </ul>
-            
+            </ul>            
         </div>
         </div>
     </div>
