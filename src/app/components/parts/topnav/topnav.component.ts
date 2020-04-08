@@ -22,21 +22,21 @@ export class TopnavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openMenu(){
+  public openMenu(){
 
-    
     if(this.spinTheLines){
       this.spinTheLines = !this.spinTheLines;
-      console.log(this.spinTheLines)
       setTimeout(()=>this.closeMenu = !this.spinTheLines, 0);
+      window.addEventListener('scroll', this.lockScroll, false);
     }else{
     //  this.closeMenu = !this.closeMenu;
       this.spinTheLines = !this.spinTheLines;
-     // console.log(this.spinTheLines)
-      setTimeout(()=>this.closeMenu = !this.spinTheLines, 700);
-    }
-    
-
+      window.removeEventListener('scroll', this.lockScroll , false);
+    }  
   }
+
+  public lockScroll(){
+    window.scrollTo(0, 0);
+ }
  
 }

@@ -6,8 +6,8 @@
     
     <div class="moviebox animated fadeIn">
         
-        <div class="cinema" *ngFor="let seat of ' '.repeat(20).split(''); index as i" (click)="getSeats( i+1)">
-            <div class="seat" clickColor [color]="'red'">
+        <div class="cinema" *ngFor="let seat of ' '.repeat(20).split(''); index as i" >
+            <div (click)="getSeats( i+1)" class="seat" clickColor [color]="'red'">
 
                 <p> {{ i+1 }} </p>
                 <p *ngIf="!!(i%4==0)">{{ "&#9855;" }}</p>
