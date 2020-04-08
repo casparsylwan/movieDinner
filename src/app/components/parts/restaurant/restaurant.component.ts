@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Customer } from '../../models/customer';
 
 @Component({
@@ -10,9 +10,13 @@ export class RestaurantComponent implements OnInit {
 
   //Customer info
   @Input() customers:Customer[];
+  @Input() checkout:boolean;
+  @Output() customersEvent = new EventEmitter();
+  @Output() checkoutEvent = new EventEmitter();
   seat:number = -1;
   id:number = -1;
   totalSum:number;
+  
 
   state:number=0;
 
@@ -72,7 +76,7 @@ export class RestaurantComponent implements OnInit {
     this.customers[this.id].orderList.push(candy);
     this.customers[this.id].calcOrderSum(); 
     this.calcTotalSum()
-  //  this.customersEvent.emit(this.customers);
+     this.customersEvent.emit(this.customers);
     
   }
 
@@ -85,7 +89,7 @@ export class RestaurantComponent implements OnInit {
       this.customers[this.id].orderList.splice(index, 1);
       this.customers[this.seat].calcOrderSum();
       this.calcTotalSum()
-    //  this.customersEvent.emit(this.customers);
+      this.customersEvent.emit(this.customers);
     }
     /*
     console.log(this.customers[this.seat]);
@@ -95,10 +99,11 @@ export class RestaurantComponent implements OnInit {
 
   public buyFood(food:any){
 
+    console.log(this.customers);
     this.customers[this.id].orderList.push(food);
     this.customers[this.id].calcOrderSum();
     this.calcTotalSum()
- //  this.customersEvent.emit(this.customers); 
+    this.customersEvent.emit(this.customers); 
 
     
     
@@ -115,7 +120,7 @@ export class RestaurantComponent implements OnInit {
       this.customers[this.id].orderList.splice( index, 1);
       this.customers[this.id].calcOrderSum();
       this.calcTotalSum()
-    //  this.customersEvent.emit(this.customers);
+      this.customersEvent.emit(this.customers);
     }
     
     
@@ -129,7 +134,7 @@ export class RestaurantComponent implements OnInit {
     this.customers[this.id].orderList.push(drinks);
     this.customers[this.id].calcOrderSum();
     this.calcTotalSum()
-  //  this.customersEvent.emit(this.customers);
+    this.customersEvent.emit(this.customers);
     
   }
 
@@ -145,7 +150,7 @@ export class RestaurantComponent implements OnInit {
     }
     
     this.calcTotalSum()
-  //  this.customersEvent.emit(this.customers);
+    this.customersEvent.emit(this.customers);
     
   }
 
@@ -156,7 +161,12 @@ export class RestaurantComponent implements OnInit {
 
   }
 
-  public checkout(){
+  public checkoutcustomer(){
+
+    console.log("hejhej")
+    this.checkout = true;
+    this.checkoutEvent.emit(this.checkout);
+    this.customersEvent.emit(this.customers);
     
   }
 

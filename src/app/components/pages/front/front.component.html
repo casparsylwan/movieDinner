@@ -8,7 +8,12 @@
     (seatsTakenEvent)="seatsTakenBool=$event"
     ></app-mainfront>
     <app-restaurant
-    *ngIf="(seatsTakenBool)"
+    *ngIf="(seatsTakenBool) && !(checkout)"
     [customers] = "customers"
+    (checkoutEvent)="checkout=$event"
     ></app-restaurant>
+    <app-checkout
+    [customers] = "customers"
+    *ngIf="(seatsTakenBool) && (checkout)"
+     ></app-checkout>
 </div>

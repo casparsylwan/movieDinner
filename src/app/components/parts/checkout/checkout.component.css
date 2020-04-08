@@ -11,15 +11,30 @@
 }
 
 .main{
-    background-color: #fb1;
-    
+    background-color: #fb1;   
     margin: 1rem auto;
     border-radius: 5px;
     width: 90%;
-    height: 30rem;
+    
     animation: slide 0.5s ease-in-out;
     border: double #fff 1px;
+
+    display: flex;
+    flex-direction: column;
 }
+
+
+
+
+
+.sub{
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+    
+
+}
+
+
 
 h2, h3{
     
@@ -43,7 +58,62 @@ h3{
     opacity: 0;
     animation: slide 2s ease-in 1s;
     animation-fill-mode:forwards;
+   
 }
+
+.btn-box{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+
+}
+
+.btn{
+    width:4rem;
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #f00;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2rem;
+    text-align: center;
+   
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform ease-in 500ms;
+    
+}
+
+.btn:target{
+    transform: scale(0.5);
+    
+}
+
+.btn.pay{
+    width: 8rem;
+    float: right;
+    margin-right: 2rem;
+}
+
+
+table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+    color:#fff;
+  }
+
+  th{
+      font-weight: bold;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(1) {background-color: #111;}
+
 
 @keyframes slide {
     

@@ -1,14 +1,49 @@
 <div class="checkoutcontainer">
     
     <div class="main">
-       <h2>Kontrollera din beställning</h2>
-       
-       <h3>Den totala summan:</h3> 
-       <h3>Antal biljetter: </h3>
-       <h3>Till filmen:</h3>
+       <h2 class="heading">Kontrollera din beställning</h2>
+            <h3> Film : {{ customers[0].movie }}</h3>
+       <div class="sub">
 
+            <h3 class="leftsub">Att betala: </h3>
+            <h3>{{totalSum + " "}} kr</h3>
+      
+      
+            <h3>Antal biljetter: </h3>
+            <h3>{{ customers.length + " " }}st </h3>            
 
-
+       </div>
+       <h3> Beställnings specifikation för stol:</h3>
+       <div class="btn-box">
+           <button
+           (click)="customerList(-1)"
+           class="btn">Dölj</button>
+       <button
+       *ngFor="let customer of customers; let i = index"
+       class="btn"
+       (click)="customerList(i)">{{ customer.seat }}</button>
+       </div>
+      
+       <table *ngIf="id!=-1" >
+        <tr>
+          <th>Produkt</th>
+          <th>pris</th>
+        </tr>
+        <tr *ngFor="let product of customers[id].orderList" >
+          <td> {{ product.name }} </td>
+          <td> {{ product.price }}</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>{{customers[id].totalSum + " "}} kr</td>
+        </tr>
+      </table>
+      
 
     </div>
+    <button
+           (click)="pay()"
+           class="btn pay">
+           Betala
+    </button>
 </div>

@@ -9,11 +9,11 @@ import { Customer } from '../../models/customer';
 export class FrontComponent implements OnInit {
   customers:Customer[];
   seatsTakenBool:boolean;
+  checkout:boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.customers);
   }
 
 }

@@ -24,7 +24,7 @@
             <div (click)="flip(3)" class="btn">
                 {{ "Godis" | uppercase   }}
             </div>
-            <div (click)="checkout()" class="btn checkout">
+            <div (click)="checkoutcustomer()" class="btn checkout">
                 {{ "Gå till kassan" | uppercase   }}
             </div>
 
@@ -48,7 +48,7 @@
                 <h3>GODIS</h3>
                 <ul>        
                     <li *ngFor="let candy of candyList">
-                        <span>{{ candy.name +" " }}</span><span>{{ candy.price +" kr"  }}</span><span><div (click)="buyCandy(candy)" class="plus">+</div><div (click)="removeCandy(candy)" class="minus">-</div></span>
+                        <span>{{ candy.name +" " }}</span><span>{{ candy.price +" kr"  }}</span><span *ngIf="id!=-1" ><div (click)="buyCandy(candy)" class="plus">+</div><div (click)="removeCandy(candy)" class="minus">-</div></span>
                     </li>        
                 </ul>                
           </div>
@@ -58,7 +58,7 @@
             <h3> DRYCKER </h3>            
             <ul>
                 <li *ngFor="let drink of drinkList">
-                    <span>{{ drink.name +" "}}</span><span>{{ drink.price+" kr"  }}</span><span><div (click)="buyDrinks(drink)" class="plus">+</div><div (click)="removeDrinks(drink)"  class="minus">-</div></span>
+                    <span>{{ drink.name +" "}}</span><span>{{ drink.price+" kr"  }}</span><span *ngIf="id!=-1" ><div (click)="buyDrinks(drink)" class="plus">+</div><div (click)="removeDrinks(drink)"  class="minus">-</div></span>
                 </li>
             </ul>
          </div>
@@ -68,7 +68,7 @@
             <h3> MAT </h3>            
              <ul>
                 <li *ngFor="let food of foodList">
-                    <span>{{ food.name +" "}}  </span><span>{{ food.price +" kr"    }}</span><span><div (click)="buyFood(food)"   class="plus">+</div><div (click)="removeFood(food)" class="minus">-</div></span>
+                    <span>{{ food.name +" "}}  </span><span>{{ food.price +" kr"    }}</span><span *ngIf="id!=-1" ><div (click)="buyFood(food)"   class="plus">+</div><div (click)="removeFood(food)" class="minus">-</div></span>
                 </li>
             </ul>
             
