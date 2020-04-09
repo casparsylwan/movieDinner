@@ -67,7 +67,7 @@ li{
 .home{
 
  opacity: 0;
- animation: ease-in 1s menuSlideIn 0ms forwards;   
+ animation: ease-in 500ms menuSlideIn 0ms forwards;   
 }
 
 .home.out{
@@ -79,7 +79,7 @@ li{
 .ticket{
 
     opacity: 0;
-    animation: ease-in 1s menuSlideIn 500ms forwards;
+    animation: ease-in 500ms menuSlideIn 300ms forwards;
 
 }
 
@@ -93,7 +93,7 @@ li{
 .member{
 
     opacity: 0;
-    animation: ease-in 1s menuSlideIn 600ms forwards;
+    animation: ease-in 500ms menuSlideIn 600ms forwards;
 
 }
 
@@ -107,7 +107,7 @@ li{
 .about{
 
     opacity: 0;
-    animation: ease-in 1s menuSlideIn 800ms forwards;
+    animation: ease-in 500ms menuSlideIn 900ms forwards;
 
 }
 
