@@ -5,16 +5,12 @@
         [ngStyle]="{'marginLeft': (spinTheLines) ? '130vw' : '0px',
                     'transition':  (spinTheLines) ? 'margin-left ease-in 500ms 700ms' : 'margin-left ease-in 500ms 0ms'}">
         <ul>
-            <li [ngClass]= "spinTheLines ?'home out' : 'home'"><a href="#" >Hem</a></li>
+            <li [ngClass]= "spinTheLines ?'home out'   : 'home'"><a href="#" >Hem</a></li>
             <li [ngClass]= "spinTheLines ?'ticket out' : 'ticket'"><a >Biljetter</a></li>
-            <li [ngClass]="spinTheLines ?'member out' : 'member'"><a >Medlem</a></li>
-            <li [ngClass]="spinTheLines ?'about out' : 'about'"><a >Om oss</a></li>
+            <li [ngClass]= "spinTheLines ?'member out' : 'member'"><a >Medlem</a></li>
+            <li [ngClass]= "spinTheLines ?'about out'  : 'about'"><a >Om oss</a></li>
         </ul>
     </div>
 </nav>
 
-<!--
 
-    'opacity':  (spinTheLines) ?  '0' :  '1',
-
--->

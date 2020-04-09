@@ -159,6 +159,10 @@
 
   }
 
+  .btn >a{
+    color: #fff;
+  }
+
   ul{
     
     width:100%;

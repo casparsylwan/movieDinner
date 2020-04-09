@@ -28,13 +28,13 @@
               
             </div>            
             <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn" id="gotomenu">
-                {{ "Mat" | uppercase }}
+                <a href="#fram">{{ "Mat" | uppercase }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
-                {{ "Drycker" | uppercase  }}
+                <a href="#fram">{{ "Drycker" | uppercase  }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(3)" class="btn">
-                {{ "Godis" | uppercase   }}
+                <a href="#fram">{{ "Godis" | uppercase   }}</a>
             </div>
             <div (click)="checkoutcustomer()" class="btn checkout">
                 {{ "Gå till kassan" | uppercase   }}
@@ -48,7 +48,7 @@
             <h3 *ngIf="(seat!=-1)">
                 Summa att betala: {{ customers[id].totalSum }}
             </h3>
-            <div 
+            <div id="fram"
                 (click)="flip(0)" 
                 class="btn">
                 {{ "fram"  }}
