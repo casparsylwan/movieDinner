@@ -10,7 +10,12 @@ export class CheckoutComponent implements OnInit {
   @Input() customers:Customer[];
 
   totalSum:number;
-  id:number = -1;
+  
+
+  //Extended specification
+  showBool:boolean = false; 
+  showStr:string = "VISA"
+  
   
 
   constructor() { }
@@ -19,8 +24,16 @@ export class CheckoutComponent implements OnInit {
     this.calcTotalSum()
   }
 
-  public customerList(id:number){
-    this.id = id;
+  public customerList(){
+    if(this.showBool){
+      this.showBool = !this.showBool;
+      this.showStr = "Visa";
+    }else{
+      this.showStr = "DÖLJ";
+      this.showBool = !this.showBool;
+    }
+    
+    
   }
 
 

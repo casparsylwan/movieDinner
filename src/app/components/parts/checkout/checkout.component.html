@@ -16,28 +16,43 @@
        <h3> Beställnings specifikation för stol:</h3>
        <div class="btn-box">
            <button
-           (click)="customerList(-1)"
-           class="btn">Dölj</button>
-       <button
-       *ngFor="let customer of customers; let i = index"
-       class="btn"
-       (click)="customerList(i)">{{ customer.seat }}</button>
-       </div>
-      
-       <table *ngIf="id!=-1" >
-        <tr>
-          <th>Produkt</th>
-          <th>pris</th>
+           (click)="customerList()"
+           class="btn"> {{ showStr  }}</button>
+           <ng-container *ngFor="let customer of customers" >
+             
+              <table *ngIf="showBool">
+                <h3>Stol {{ customer.seat  }}</h3>
+                <tr>
+                  <th>Vara</th>
+                  <th>Pris</th>
+                </tr>
+                <tr *ngFor="let order of customer.orderList">
+                  <td> {{ order.name  }} </td>
+                  <td> {{ order.price + " " }} kr</td>
+                </tr>
+                <tr>
+                  <td>Summa</td>
+                  <td> {{ customer.totalSum + " " }} kr </td>
+                </tr>
+              </table>
+           </ng-container>
+        
+        <!--
+        <tr >
+          <td> STOL </td>
+          <td>{{ customer.seat  }}</td>
+        <tr *ngFor="let order of customer">
+          <td>order.name</td>
+          <td>order.price</td>
         </tr>
-        <tr *ngFor="let product of customers[id].orderList" >
-          <td> {{ product.name }} </td>
-          <td> {{ product.price }}</td>
         </tr>
+       
         <tr>
           <td>Total</td>
           <td>{{customers[id].totalSum + " "}} kr</td>
         </tr>
-      </table>
+        -->
+      
       
 
     </div>
