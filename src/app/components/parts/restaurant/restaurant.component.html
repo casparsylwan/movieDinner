@@ -40,15 +40,15 @@
                 {{ "Gå till kassan" | uppercase   }}
             </div>
           </div>
-          <div class="card-face card-faceback">
+          <div id="fram" class="card-face card-faceback">
 
-            <h2 *ngIf="(seat!=-1)">
+            <h2  *ngIf="(seat!=-1)">
                 Beställning till stol: {{ customers[id].seat }}
             </h2>
-            <h3 *ngIf="(seat!=-1)">
+            <h3  *ngIf="(seat!=-1)">
                 Summa att betala: {{ customers[id].totalSum }}
             </h3>
-            <div id="fram"
+            <div 
                 (click)="flip(0)" 
                 class="btn">
                 {{ "fram"  }}
