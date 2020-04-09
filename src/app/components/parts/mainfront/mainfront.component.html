@@ -5,6 +5,9 @@
         </h2>
     </div>
 
+<!-----------------Extra divs for big size---------------------->
+<div *ngIf="width>750 && state!=1" class="rigth-top"> {{ width }} </div>
+<div *ngIf="width>750 && state!=1" class="right-down">{{ width }}</div>
 <!------------------Order tickets starts here------------------------>
 
     <div class="down" *ngIf="!(numberOfTicketChoosen)">

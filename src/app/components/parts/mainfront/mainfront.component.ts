@@ -6,11 +6,27 @@ import { Customer } from '../../models/customer';
 @Component({
   selector: 'app-mainfront',
   templateUrl: './mainfront.component.html',
-  styleUrls: ['./mainfront.component.css']
+  styleUrls: ['./mainfront.component.css'],
+  host: {
+    "(window:resize)":"onWindowResize($event)"
+  }
 })
 export class MainfrontComponent implements OnInit {
   @Output() customersEvent = new EventEmitter();
   @Output() seatsTakenEvent = new EventEmitter();
+
+   // Get screenSize
+   screenSize:number;
+   isMobile: boolean = false;
+   width:number = window.innerWidth;
+   height:number = window.innerHeight;
+   mobileWidth:number  = 750;
+ 
+   onWindowResize(event) {
+    this.width = event.target.innerWidth;
+    this.height = event.target.innerHeight;
+    this.isMobile = this.width < this.mobileWidth;
+}
 
 
   //Customer object 
@@ -83,9 +99,15 @@ export class MainfrontComponent implements OnInit {
          break; 
       } 
       default: { 
+        if(this.width<750){
          return {
           'height' : '15rem'
-         } 
+          } 
+         }else{
+           return{
+            'height' : '30rem'
+           }
+         }
          break; 
       } 
    } 
