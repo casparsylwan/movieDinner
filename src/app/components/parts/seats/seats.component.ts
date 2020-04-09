@@ -71,7 +71,7 @@ export class SeatsComponent implements OnInit {
       this.seatsTakenBool = true;
       this.customersEvent.emit(this.customers);
       setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
-      console.log("hej");
+      
     }
 
 }

@@ -16,6 +16,10 @@ export class RestaurantComponent implements OnInit {
   seat:number = -1;
   id:number = -1;
   totalSum:number;
+
+  //classe names
+  btn:string ="btn checkout";
+  btnActive:string = "btn checkout active";
   
 
   state:number=0;

@@ -7,15 +7,27 @@
             </h2>
             <h3>{{ subHeading }} </h3>
             <h3 id="totalsum" *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
-            <div class="seats"> 
-                <div class="btn checkout"
+            <!--
+               [ngClass]="btn"
+                
+                      
+            -->
+
+            <div class="seats">
+            
+                <div 
+                 [ngClass]="( id == i)? btnActive : btn"               
                 *ngFor="let customer of customers;let i = index"
-                (click)="getCustomer(customer.seat, i )" > 
+                (click)="getCustomer(customer.seat, i )" >
+             <a 
+                href="#gotomenu">
                 beställ till stol
                 {{ customer.seat }} 
+            </a>
                 </div>
+              
             </div>            
-            <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn">
+            <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn" id="gotomenu">
                 {{ "Mat" | uppercase }}
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
@@ -33,7 +45,9 @@
             <h2 *ngIf="(seat!=-1)">
                 Beställning till stol: {{ customers[id].seat }}
             </h2>
-            <h3 *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
+            <h3 *ngIf="(seat!=-1)">
+                Summa att betala: {{ customers[id].totalSum }}
+            </h3>
             <div 
                 (click)="flip(0)" 
                 class="btn">
