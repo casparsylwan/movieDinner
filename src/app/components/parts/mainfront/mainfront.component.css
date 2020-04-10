@@ -177,8 +177,8 @@ input{
     }
 /*-------------General dispay-------------------*/
     .wraper{
-        width:85vw;
-        
+        width:100vw;
+        border: solid black double;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -190,11 +190,11 @@ input{
         "film film"
         "time time"
        ;
-        
+    
     }
 
     .wraper.one{
-        width:85vw;
+        width:100vw;
         
         margin: 0 auto;
         display: grid;
@@ -206,6 +206,8 @@ input{
         "film film"
         "input time"
        ;
+
+       
         
     }
 
@@ -214,14 +216,37 @@ input{
       grid-area: top;
       background-color: #add8ff;
       width: 100%;
+
+      
+
+    
     }
+
+    .top h2{
+
+      color: #f00;
+      font-family: Tahoma;
+      font-weight: bolder;
+      font-size: 2.5rem;
+      
+
+      margin-top: 10%;
+      margin-left: 10%;
+    } 
 
 
 
     .down{
         grid-area: film;
         height: 30rem;
+        background-color: black;
         
+        display: flex;
+        justify-content: space-evenly;
+        
+        
+        width: 100%;
+
         overflow-y: hidden ;
     }
 
@@ -230,11 +255,20 @@ input{
         display: flex;
         width: 100%;
         height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        color: #f00;
+        font-family: Tahoma;
+        font-weight: bolder;
+        font-size: 2rem;
+        
+        
     }
 
     .rigth-top{
         grid-area: r-top;
-        background-color: #ff5f2d;
+        background-color: #f1a900;
     }
 
     .right-down{
@@ -249,7 +283,7 @@ input{
         margin-bottom: 0rem;
         margin-top: 0rem;
         width: 100%;
-
+        cursor: pointer;
         align-self: start;
 
         
@@ -262,11 +296,19 @@ input{
 
     /*-------------Grid-area-placement------------ends---------------------*/
 
+    .rigth{
+        display: flex;
+        justify-content: space-evenly;
+        
+        
+    }
+
     img{
         
         height: 360px;
         width: 240px;
         margin-top: 2rem;
+        cursor: pointer;
         transition: transform ease-out 500ms;
     }
 
@@ -312,8 +354,10 @@ input{
 
         font-size: 1.5rem;
         font-weight: bolder;
-        transition: all ease-in 1s;
 
+        cursor: pointer;
+
+        transition: all ease-in 1s;
         animation: cinema 1s ease-in;
     }
 
@@ -335,6 +379,10 @@ input{
         display: block;
         font-size: 1.5rem;
         line-height: 1.5rem;
+        margin-top: 1rem;
+
+        cursor: pointer;
+
         animation: cinema 1s ease-in;
     }
 

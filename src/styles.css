@@ -27,7 +27,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -63,4 +63,5 @@ a{
 button:focus{
 	outline:none;
 }
+
 

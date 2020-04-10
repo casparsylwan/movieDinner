@@ -20,7 +20,7 @@ export class SeatsComponent implements OnInit {
   seats:number[] = [];
 
   //Class variables
-  wraper:string = "wraper";
+  wraper:string = "wrap";
   screen:string = "screen";
   moviebox:string = "moviebox animated fadeIn";
   cinema:string = "cinema";
@@ -56,7 +56,7 @@ export class SeatsComponent implements OnInit {
       }
       this.customersEvent.emit(this.customers);
       //this.seatsTakenBool = true;
-      //this.wraper = "wraper animated flipOut"
+      //this.wraper = "wrap animated flipOut"
       //setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
       //this.seatsTakenEvent.emit(this.seatsTakenBool);
     }
@@ -64,7 +64,7 @@ export class SeatsComponent implements OnInit {
   }
 
   public checkout(){
-      this.wraper = "wraper animated flipOut";
+      this.wraper = "wrap animated flipOut";
       this.screen = "screen scale-out";
       this.moviebox = "moviebox scale-out";
       this.cinema = "cinema scale-out";

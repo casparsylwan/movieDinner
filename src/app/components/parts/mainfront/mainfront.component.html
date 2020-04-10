@@ -1,4 +1,4 @@
-<div [ngClass]="wraper">
+<div [ngClass]="state===1 && width>750 ?'wraper one'   : 'wraper'">
     <div *ngIf="!(numberOfTicketChoosen)" [ngStyle]="stateChangeMainTop()" class="top">
         <h2>
             {{ fronttext }}
@@ -6,8 +6,8 @@
     </div>
 
 <!-----------------Extra divs for big size---------------------->
-<div *ngIf="width>750 && state!=1" class="rigth-top"> {{ width }} </div>
-<div *ngIf="width>750 && state!=1" class="right-down">{{ width }}</div>
+<div *ngIf="width>750 && state!=1" class="rigth-top"> Beställ den bästa maten till filmen! </div>
+<div *ngIf="width>750 && state!=1" class="right-down"> Vi har även det bästa godist!</div>
 <!------------------Order tickets starts here------------------------>
 
     <div class="down" *ngIf="!(numberOfTicketChoosen)">
