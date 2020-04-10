@@ -130,70 +130,59 @@
 
 /*  ------------- media query---------------*/
 
-@media screen and (min-width: 750px) {
+    @media screen and (min-width: 700px) {
 
- 
-
-    .moviebox{
-        
-        width: 100%;
-        padding: 10rem 20%; 
-        margin-left: 20%;   
-    
-    }
-
-    .screen{
-
-        margin-left: 50%;
-    }
-
-    .cinema{
-
-        height: 8rem;
-        width: 8rem;
-        margin-top: 2rem;    
-    }
-
-    .cinema:nth-child(4n-3){
-        transform: rotate(20deg);
-        margin-top: -10rem;
-        
-        
-    }
-    
-    .cinema:nth-child(4n-2){
-        transform: rotate(10deg);
-        margin-top: 3rem;
        
-    }
-    
-    .cinema:nth-child(4n-1){
-        transform: rotate(-10deg);
-        margin-top: 3rem;
-    }
-    
-    .cinema:nth-child(4n){
-        transform: rotate(-20deg);
-        margin-top: -10rem;
+        .moviebox{
+               
+            padding-top: 10rem;               
+            
+        }
+       
+        .cinema{
+
+            height: 6rem;
+            width: 6rem;
+            margin-top: 2rem;    
+        }
+
+        .cinema:nth-child(4n-3){
+            transform: rotate(20deg);
+            margin-top: -10rem;
+            
+            
+        }
         
+        .cinema:nth-child(4n-2){
+            transform: rotate(10deg);
+            margin-top: 3rem;
+           
+        }
         
+        .cinema:nth-child(4n-1){
+            transform: rotate(-10deg);
+            margin-top: 3rem;
+        }
+        
+        .cinema:nth-child(4n){
+            transform: rotate(-20deg);
+            margin-top: -10rem;
+            
+            
+        }
+
+        .cinema p{
+
+            color: #fff;
+            padding-top: 1rem;
+            font-size: 2.5rem;
+            text-align: center;
+        
+        }
+
+
     }
-    
-    .cinema p{
 
-        color: #fff;
-        padding-top: 1rem;
-        font-size: 2.5rem;
-        text-align: center;
-    
-    }
-
-
-
-
-
-
-}
 
 
 @keyframes scalein {
