@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
     
 }
 
@@ -177,8 +179,7 @@ input{
     }
 /*-------------General dispay-------------------*/
     .wraper{
-        width:100vw;
-        border: solid black double;
+        width:100%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -245,9 +246,10 @@ input{
         justify-content: space-evenly;
         
         
-        width: 100%;
+        width: 100%; 
 
         overflow-y: hidden ;
+        overflow-x: hidden;
     }
 
     

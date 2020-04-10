@@ -36,7 +36,7 @@
          class="showtime">
             
             <span (click)="setDateAndTime(i)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
-        </div>
+    </div>
     <div *ngIf="!(numberOfTicketChoosen)" class="video">
         
             <div *ngIf="(state==1) && !(numberOfTicketChoosen)" class="iframe">
@@ -63,8 +63,8 @@
                             skicka
                         </button>            
                     </div>
+                </div>
             </div>
-        </div>
 
      </div>
         <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean) && !(seatsTakenBool)"
@@ -75,4 +75,4 @@
                     (click)="printer()">
                 </app-seats>
         <app-footer></app-footer>
-    </div>
+</div>
