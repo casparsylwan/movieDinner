@@ -1,4 +1,4 @@
-<div class="wraper">
+<div [ngClass]="wraper">
     <div *ngIf="!(numberOfTicketChoosen)" [ngStyle]="stateChangeMainTop()" class="top">
         <h2>
             {{ fronttext }}
@@ -46,14 +46,33 @@
              gyroscope; 
              picture-in-picture" allowfullscreen>
                 </iframe>
+            </div>
 
+            <!--Date for full screen-->
+            <div class="date-big">
+                <input  *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
+                <div *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="display-date-big">
+                    <span (click)="setDateAndTime(i)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
+                </div>
+                <div *ngIf="(state==1) && !(numberOfTicketChoosen) && (dateSetBoolean)" class="howmany-big">
+                    <span >{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr </span>
+                    <span *ngIf="(dateSetBoolean)" >  {{ orderText[2]}} </span>
+                    <div *ngIf=" (dateSetBoolean)" class="btn-input">
+                        <input type="number" class="numberOfTickets" min="1" max="20" value="1" [(ngModel)]="tickets" />
+                        <button (click)="getNumberOfTickets()" class="tickets">
+                            skicka
+                        </button>            
+                    </div>
             </div>
         </div>
+
+     </div>
         <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean) && !(seatsTakenBool)"
                     [customers]="customers"
                     [seatsTakenBool]="seatsTakenBool"
                     (customersEvent)="customers=$event"
                     (seatsTakenEvent)="seatsTakenBool=$event"
-                    (click)="printer()"></app-seats>
+                    (click)="printer()">
+                </app-seats>
         <app-footer></app-footer>
     </div>

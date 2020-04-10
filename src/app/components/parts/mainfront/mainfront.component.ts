@@ -47,6 +47,9 @@ export class MainfrontComponent implements OnInit {
   dateSetBoolean:boolean;
   seatsTakenBool:boolean = false;
 
+  //classes 
+  wraper:string = "wraper";
+
   fronttext:string = "Boka din film, middag och godis idag!"
   orderText:string[] = ["Biljetter till ", "Kostar", "Hur många är ni?"];
 
@@ -88,9 +91,19 @@ export class MainfrontComponent implements OnInit {
 
     switch(this.state) { 
       case 1: { 
-        return {
+        if(this.width<750){
+
+          return {
           'height' : '0rem'
-        } 
+          } 
+        }else{
+            this.wraper = "wraper one"
+          return{
+            
+            'height' : '100%'
+          }
+        }
+        
           
          break; 
       } 

@@ -22,10 +22,6 @@
     transition: height ease-in 500ms;
 }
 
-.rigth-top, .right-down{
-    display: none;
-}
-
 /*-------------Welcome page finish here---------------*/
 
 .down{
@@ -42,7 +38,7 @@
 .rigth{
     padding: 0.5rem;
     padding-top: 1rem;
-    height: 100%;
+    
     background-color: black;
     display: inline-block;
     
@@ -165,10 +161,21 @@ input{
 }
 
 
+
 /*-----------mediaquery---------------*/
 
 @media screen and (min-width: 750px) {
 
+    /*--------small screen removal-------------*/
+
+    .howmany{
+        display: none;    
+    }
+
+    .showtime{
+        display: none;
+    }
+/*-------------General dispay-------------------*/
     .wraper{
         width:85vw;
         
@@ -176,12 +183,28 @@ input{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "trailer trailer"
-        "input ."
-        "time time"        
+        ". trailer"
+        ". input"            
         "top r-top"
         "top r-down"
         "film film"
+        "time time"
+       ;
+        
+    }
+
+    .wraper.one{
+        width:85vw;
+        
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+           
+        "top trailer"
+        "top trailer"
+        "film film"
+        "input time"
        ;
         
     }
@@ -191,9 +214,6 @@ input{
       grid-area: top;
       background-color: #add8ff;
       width: 100%;
-      height: 1rem;
-      align-self: end;
-      justify-self: end;
     }
 
 
@@ -210,14 +230,11 @@ input{
         display: flex;
         width: 100%;
         height: 100%;
-        background-color: teal;
-        align-self: end;
-        justify-self: end;
     }
 
     .rigth-top{
         grid-area: r-top;
-        background-color: #fb1;
+        background-color: #ff5f2d;
     }
 
     .right-down{
@@ -226,23 +243,14 @@ input{
         
     }
 
-    .howmany{
-        grid-area: input;
-        width: 85vw;
-        
-    }
-
-    .showtime{
-        grid-area: time;
-        height: 100%;
-
-    }
 
     .video{
         grid-area: trailer;
         margin-bottom: 0rem;
         margin-top: 0rem;
-        padding: 2rem;
+        width: 100%;
+
+        align-self: start;
 
         
     }
@@ -255,6 +263,7 @@ input{
     /*-------------Grid-area-placement------------ends---------------------*/
 
     img{
+        
         height: 360px;
         width: 240px;
         margin-top: 2rem;
@@ -262,52 +271,77 @@ input{
     }
 
     img:hover{
-        transform: scale(1.2);
+        
+        transform: scale(1.1) translateY(10%);
+        overflow: visible;
+    }
+
+    /*-------picking tickets and dates big-------------*/
+
+    
+
+
+    .date-big{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+
+        animation: cinema 1s ease-in;
+    }
+
+    .date-big >.numberOfTickets{
+        position: relative;
+        margin-top: -1rem;
+
+        animation: cinema 1s ease-in;
+    }
+
+    .display-date-big{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0.5rem;
+
+        animation: cinema 1s ease-in;
+        
+    }
+
+    .display-date-big span{
+
+        font-size: 1.5rem;
+        font-weight: bolder;
+        transition: all ease-in 1s;
+
+        animation: cinema 1s ease-in;
     }
 
     .tickets, .numberOfTickets{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 1.5rem;
     }
 
-   
-    .showtime span{
-        height: 4rem;
-        padding: 1rem;
-        font-size: 2rem;
-        font-style: italic;
-        color: #fff;
-        transition: all ease-in 1s ;
+    .display-date-big >span:hover{
 
-
-    }
-
-    .showtime span:hover{
-        
-        color: #f00;
-        
+        color: #add8ff;
         transform: scale(1.1);
+
     }
 
-    .howmany span{
+    .howmany-big span{
 
-        font-size: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        font-weight: bolder;
-        letter-spacing: 3px;
-        animation: cinema 500ms;
-    }
-
-    br {
-        content: "";
-        margin: 2em;
+        text-align: center;
         display: block;
-        font-size: 24%;
-      }
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        animation: cinema 1s ease-in;
+    }
+
+    
 
   }
-
+  
 
   @keyframes cinema {
       

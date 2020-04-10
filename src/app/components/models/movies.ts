@@ -21,7 +21,7 @@ export class movies{
         },
         {
             img:"https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-            name: "Foret Gump",
+            name: "Forest Gump",
             trailer : "https://www.youtube.com/embed/uPIEn0M8su0",
             price : 65,
             date: ["19","21"]
