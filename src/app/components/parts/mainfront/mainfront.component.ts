@@ -36,6 +36,7 @@ export class MainfrontComponent implements OnInit {
   //Movie info variables
   urlSafe: SafeResourceUrl;
   movieName:string="";
+  movieDesc:string ="";
   movieInfo:movies = new movies();
   ticketprice:number;
   tickets: number = 1;
@@ -46,6 +47,7 @@ export class MainfrontComponent implements OnInit {
   numberOfTicketChoosen:boolean = false;
   dateSetBoolean:boolean;
   seatsTakenBool:boolean = false;
+  reload:boolean = false;
 
   //classes 
   wraper:string = "wraper";
@@ -60,9 +62,10 @@ export class MainfrontComponent implements OnInit {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl( this.movieInfo.movies[i].trailer);
     this.state = 1;
     this.movieName =  this.movieInfo.movies[i].name;
-    this.ticketprice = this.movieInfo.movies[i].price
-    this.showTmes = this.movieInfo.movies[i].date
-    
+    this.ticketprice = this.movieInfo.movies[i].price;
+    this.showTmes = this.movieInfo.movies[i].date;
+    this.movieDesc = this.movieInfo.movies[i].desc;
+    this.reload = !this.reload;
   }
 
   getNumberOfTickets(){
@@ -100,7 +103,9 @@ export class MainfrontComponent implements OnInit {
             this.wraper = "wraper one"
           return{
             
-            'height' : '100%'
+            'height' : '100%',
+            'background-image': 'none',
+            'background-color': '#000'
           }
         }
         
@@ -132,6 +137,10 @@ export class MainfrontComponent implements OnInit {
     setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
     console.log(this.seatsTakenBool)
   }
+
+
+    
+  
 
   constructor(public sanitizer: DomSanitizer) { }
 

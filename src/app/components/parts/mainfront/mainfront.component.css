@@ -218,9 +218,6 @@ input{
       grid-area: top;
       background-color: #add8ff;
       width: 100%;
-
-      
-
     
     }
 
@@ -235,8 +232,6 @@ input{
       margin-top: 10%;
       margin-left: 10%;
     } 
-
-
 
     .down{
         grid-area: film;
@@ -329,6 +324,26 @@ input{
     /*-------picking tickets and dates big-------------*/
 
     
+    .desc{
+
+        margin: 1rem 2rem 2rem 2rem;
+        color: #fff;
+        font-family: Tahoma;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        
+        animation: fly-big 1s ease-in;
+
+    }
+
+    .desc h3{
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    /*------------trailer---------------*/
 
 
     .date-big{
@@ -404,3 +419,9 @@ input{
     0%{ opacity: 0;}
     100%{ opacity: 1;}
   }
+
+  @keyframes fly-big{
+    
+    0%{ transform: scale(0); height:0 ; opacity: 0;}
+    100%{ transform: scale(1); height:100% ; opacity: 1;} 
+  } 
