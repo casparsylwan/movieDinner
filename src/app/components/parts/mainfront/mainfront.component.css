@@ -1,6 +1,6 @@
 .wraper{
     
-    width: 100vw;
+    width: 100%;
     
     padding-top: 4rem;
     display: flex;
@@ -195,7 +195,7 @@ input{
     }
 
     .wraper.one{
-        width:100vw;
+        width:100%;
         
         margin: 0 auto;
         display: grid;
@@ -206,6 +206,7 @@ input{
         "top trailer"
         "film film"
         "input time"
+        "seat seat"
        ;
 
        
@@ -287,8 +288,13 @@ input{
         width: 100%;
         cursor: pointer;
         align-self: start;
+        overflow-x: hidden;
 
         
+    }
+
+    app-seats{
+        grid-area: seat;
     }
 
     .iframe{
