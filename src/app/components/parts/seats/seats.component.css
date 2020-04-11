@@ -1,4 +1,6 @@
-
+.wraper{
+    width: 100vw;
+}
 
 
 
@@ -6,7 +8,7 @@
 
     
     
-    width: 100%;
+    width: 100vw;
     background-color: #111;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -130,11 +132,11 @@
 
 /*  ------------- media query---------------*/
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 750px) {
 
-       
+       /**/
         .moviebox{
-               
+            width: 100%;   
             padding-top: 10rem;               
             
         }
