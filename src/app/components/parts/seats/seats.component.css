@@ -124,8 +124,6 @@
             opacity: 0.9;
             z-index: 7;
 
-            display: block;
-
             animation: ready-to-continue 1s ease-in;
         }
 
@@ -154,33 +152,43 @@
             margin-top: 2rem;
             font-size: 1.5rem;
 
-           animation: typing2 1.5s steps(20, end) 1s forwards, blink-caret;
+           animation: typing2 0.5s steps(20, end) 1.5s forwards, blink-caret;
 
         }
 
         .ready p:nth-child(1){
             font-size: 1.2rem;
-            animation: typing2 1.5s steps(20, end) 1.5s forwards, blink-caret;
+            animation: typing2 1s steps(20, end) 2s forwards, blink-caret;
         }
 
         .ready p:nth-child(2){
             font-size: 1.2rem;
-            animation: typing2 1s steps(20, end) 2.5s forwards, blink-caret;
+            animation: typing2 0.5s steps(20, end) 3s forwards, blink-caret;
         }
 
         .ready p:nth-child(3){
             font-size: 1.2rem;
-            animation: typing2 1s steps(20, end) 3.5s forwards, blink-caret;
+            animation: typing2 0.5s steps(20, end) 3.5s forwards, blink-caret;
         }
 
         .ready p:nth-child(4){
             font-size: 1.2rem;
-            animation: typing2 1s steps(20, end) 4.5s forwards, blink-caret;
+            animation: typing2 1s steps(20, end) 4s forwards, blink-caret;
         }
 
         .ready p:nth-child(5){
             font-size: 1.2rem;
+            animation: typing2 0.5s steps(20, end) 5s forwards, blink-caret;
+        }
+
+        .ready p:nth-child(6){
+            font-size: 1.2rem;
             animation: typing2 1s steps(20, end) 5.5s forwards, blink-caret;
+        }
+
+        .ready p:nth-child(7){
+            font-size: 1.2rem;
+            animation: typing2 1s steps(20, end) 5s forwards, blink-caret;
         }
 
         .btnbox{

@@ -44,6 +44,7 @@ export class SeatsComponent implements OnInit {
     
     if(this.seats.indexOf(i)===-1){
       this.seats.push(i);
+      this.seats.sort();
     }else{
       this.seats.splice(this.seats.indexOf(i))
     }
