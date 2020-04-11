@@ -42,6 +42,7 @@ export class MainfrontComponent implements OnInit {
   tickets: number = 1;
   showTmes:string[];
   movieDate:string =  "2020-04-25";
+  time:string = "";
 
   //State booleans
   numberOfTicketChoosen:boolean = false;
@@ -76,7 +77,7 @@ export class MainfrontComponent implements OnInit {
       let customer:Customer = new Customer();
       customer.id = i;
       customer.movie = this.movieName;
-      customer.date = this.movieDate;
+      customer.date = this.movieDate + this.time;
       customer.orderList.push({name:this.movieName, price:this.ticketprice});
       customer.calcOrderSum()
       this.customers.push(customer);
@@ -86,8 +87,13 @@ export class MainfrontComponent implements OnInit {
   }
 
   setDateAndTime(i:number){
+
     console.log(i +" " + this.movieDate );
+    this.time = " klockan: " + i;
     this.dateSetBoolean = true;
+
+    
+
   }
 
   public stateChangeMainTop(){

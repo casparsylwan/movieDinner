@@ -332,15 +332,16 @@ input{
         font-weight: bolder;
         font-size: 1.2rem;
         line-height: 2rem;
-        
         animation: fly-big 1s ease-in;
 
     }
 
-    .desc h3{
+    .top h3{
         color: #fff;
         font-size: 1.5rem;
         margin-top: 2rem;
+        text-align: center;
+        
     }
 
     /*------------trailer---------------*/
@@ -377,6 +378,7 @@ input{
 
         font-size: 1.5rem;
         font-weight: bolder;
+        color:#fff;
 
         cursor: pointer;
 
@@ -391,7 +393,7 @@ input{
 
     .display-date-big >span:hover{
 
-        color: #add8ff;
+        color: #f00;
         transform: scale(1.1);
 
     }
@@ -402,6 +404,7 @@ input{
         display: block;
         font-size: 1.5rem;
         line-height: 1.5rem;
+        color: #fff;
         margin-top: 1rem;
 
         cursor: pointer;
@@ -422,6 +425,6 @@ input{
 
   @keyframes fly-big{
     
-    0%{ transform: scale(0); height:0 ; opacity: 0;}
-    100%{ transform: scale(1); height:100% ; opacity: 1;} 
+    0%{ transform: scale(0); opacity: 0;}
+    100%{ transform: scale(1); opacity: 1;} 
   } 

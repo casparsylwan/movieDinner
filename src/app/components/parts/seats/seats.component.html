@@ -1,8 +1,10 @@
 <div [ngClass]="wraper">
+    <!--
     <button 
     class="btn"
     *ngIf="!(customers.length>seats.length)"
     (click)="checkout()">Fortsätt</button>
+    -->
     <div [ngClass]="screen">The Show will begin<br/> Välj era {{ numberOfSeats }} sittplatser! 
         <div *ngFor="let seat of seats"> Vald plats är {{ seat }}  </div> 
     </div>
@@ -17,5 +19,27 @@
 
             </div>
         </div>
+    </div>
+    <div
+    *ngIf="!(customers.length>seats.length)"
+     class="ready">
+
+     <h3>Din beställning:</h3>
+
+     <p>Film: {{ customers[0].movie }}</p>
+     <p>antal: {{ customers.length }}</p>
+     <p>datum tid:</p>
+     <p> {{ customers[0].date }}</p>
+     <p> Med sitplatserna: {{ seats.toString() }}</p>
+
+     <div class="btnbox">
+        <button>ÄNDRA</button>
+        <button>FORTSÄTT</button>
+
+     </div>
+     
+
+     
+    
     </div>
 </div>

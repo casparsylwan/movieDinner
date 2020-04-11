@@ -2,7 +2,7 @@
     <div *ngIf="!(numberOfTicketChoosen)" [ngStyle]="stateChangeMainTop()" class="top">
         <h2 *ngIf="!(state===1 && width>750)" >
             {{ fronttext }}
-        </h2 >
+        </h2>
         <h3 class="desc" *ngIf="state===1 && width>750"> Handling </h3>
         <p class="desc" *ngIf="state===1 && width>750 && !reload">{{ movieDesc }}</p>
         <p class="desc" *ngIf="state===1 && width>750 &&  reload">{{ movieDesc }}</p>
@@ -38,7 +38,7 @@
     <div *ngIf="(state==1) && !(dateSetBoolean)"
          class="showtime">
             
-            <span (click)="setDateAndTime(i)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
+            <span (click)="setDateAndTime(time)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
     </div>
     <div *ngIf="!(numberOfTicketChoosen)" class="video">
         
@@ -55,7 +55,7 @@
             <div class="date-big">
                 <input  *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
                 <div *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="display-date-big">
-                    <span (click)="setDateAndTime(i)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
+                    <span (click)="setDateAndTime(time)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
                 </div>
                 <div *ngIf="(state==1) && !(numberOfTicketChoosen) && (dateSetBoolean)" class="howmany-big">
                     <span >{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr </span>
