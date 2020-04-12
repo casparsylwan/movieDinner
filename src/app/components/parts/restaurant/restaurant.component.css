@@ -128,7 +128,7 @@
 
   .chair.active{
 
-    
+    order: 1;
     animation: rotate360 3s forwards;
   }
 
