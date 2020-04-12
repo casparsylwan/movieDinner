@@ -1,16 +1,16 @@
-<div [ngClass]="state===1 && width>750 ?'wraper one'   : 'wraper'">
+<div [ngClass]="state===1 && width>=750 ?'wraper one'   : 'wraper'">
     <div *ngIf="!(numberOfTicketChoosen)" [ngStyle]="stateChangeMainTop()" class="top">
-        <h2 *ngIf="!(state===1 && width>750)" >
+        <h2 *ngIf="state==0 && width>=750" >
             {{ fronttext }}
         </h2>
-        <h3 class="desc" *ngIf="state===1 && width>750"> Handling </h3>
-        <p class="desc" *ngIf="state===1 && width>750 && !reload">{{ movieDesc }}</p>
-        <p class="desc" *ngIf="state===1 && width>750 &&  reload">{{ movieDesc }}</p>
+        <h3 class="desc" *ngIf="state===1 && width>=750"> Handling </h3>
+        <p class="desc" *ngIf="state===1 && width>=750 && !reload">{{ movieDesc }}</p>
+        <p class="desc" *ngIf="state===1 && width>=750 &&  reload">{{ movieDesc }}</p>
     </div>
 
 <!-----------------Extra divs for big size---------------------->
-<div *ngIf="width>750 && state!=1" class="rigth-top"> Beställ den bästa maten till filmen! </div>
-<div *ngIf="width>750 && state!=1" class="right-down"> Vi har även det bästa godist!</div>
+<div *ngIf="width>=750 && state!=1" class="rigth-top"> Beställ den bästa maten till filmen! </div>
+<div *ngIf="width>=750 && state!=1" class="right-down"> Vi har även det bästa godist!</div>
 <!------------------Order tickets starts here------------------------>
 
     <div class="down" *ngIf="!(numberOfTicketChoosen)">
@@ -53,11 +53,11 @@
 
             <!--Date for full screen-->
             <div class="date-big">
-                <input  *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
-                <div *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="display-date-big">
+                <input  *ngIf="!(dateSetBoolean) && width>=750 && (state==1)" class="numberOfTickets" type="date" [(ngModel)]="movieDate">
+                <div *ngIf="!(dateSetBoolean) && width>=750 && (state==1)" class="display-date-big">
                     <span (click)="setDateAndTime(time)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
                 </div>
-                <div *ngIf="(state==1) && !(numberOfTicketChoosen) && (dateSetBoolean) && width>750" class="howmany-big">
+                <div *ngIf="(state==1) && !(numberOfTicketChoosen) && (dateSetBoolean) && width>=750" class="howmany-big">
                     <span >{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr </span>
                     <span *ngIf="(dateSetBoolean)" >  {{ orderText[2]}} </span>
                     <div *ngIf=" (dateSetBoolean)" class="btn-input">

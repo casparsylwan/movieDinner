@@ -166,6 +166,7 @@ input{
 
 /*-----------mediaquery---------------*/
 
+
 @media screen and (min-width: 750px) {
 
     /*--------small screen removal-------------*/
@@ -202,15 +203,12 @@ input{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
            
-        "top trailer"
-        "top trailer"
+        "trailer trailer"
+        "top top"
         "film film"
         "input time"
         "seat seat"
-       ;
-
-       
-        
+       ;    
     }
 
 
@@ -410,9 +408,31 @@ input{
         cursor: pointer;
 
         animation: cinema 1s ease-in;
+    }    
+
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    .wraper.one{
+        width:100%;
+        
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+           
+        "top trailer"
+        "top trailer"
+        "film film"
+        "input time"
+        "seat seat"
+       ;
+
+       
+        
     }
 
-    
 
   }
   
