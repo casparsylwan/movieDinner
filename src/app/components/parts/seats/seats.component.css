@@ -293,107 +293,43 @@
         }
 
         .ready{
-            position: fixed;
-            height: 20rem;
+            
+        
             width: 50%;
-            border-radius: 30px;
-            top: 33%;
             left: 33%;
-            background-color: #fb1;
-            opacity: 0.9;
-            z-index: 7;
-
-            animation: ready-to-continue 1s ease-in;
         }
 
-        .ready h3, .ready p{
-
-            color: #fff;
-            text-align: center;
-            opacity: 0;
-            
-            font-weight: bold;
-            margin-top: 2rem;
-            line-height: 2rem;
-            
-
-            overflow: hidden; /* Ensures the content is not revealed until the animation */
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-            letter-spacing: .2rem; 
-            
-
-        }
 
         .ready h3{
-            margin-top: 2rem;
+            
             font-size: 2rem;
-
-           animation: typing2 1.5s steps(20, end) 1s forwards, blink-caret;
 
         }
 
         .ready p:nth-child(1){
-            font-size: 1.2rem;
+            
             animation: typing2 1.5s steps(20, end) 1.5s forwards, blink-caret;
         }
 
         .ready p:nth-child(2){
-            font-size: 1.2rem;
+            
             animation: typing2 1s steps(20, end) 2.5s forwards, blink-caret;
         }
 
         .ready p:nth-child(3){
-            font-size: 1.2rem;
+            
             animation: typing2 1s steps(20, end) 3.5s forwards, blink-caret;
         }
 
         .ready p:nth-child(4){
-            font-size: 1.2rem;
+            
             animation: typing2 1s steps(20, end) 4.5s forwards, blink-caret;
         }
 
         .ready p:nth-child(5){
-            font-size: 1.2rem;
+           
             animation: typing2 1s steps(20, end) 5.5s forwards, blink-caret;
         }
-
-        .btnbox{
-            margin-left: 25%;
-        }
-
-        .btnbox button{
-            background-color: #fff;
-            border-radius: 20px;
-
-            width:10rem;
-            height: 2rem;
-            margin-top: 1rem;
-            margin-left: 2rem;
-            background-color: #fff;
-            color: #f00;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 2rem;
-            text-align: center;
-               
-            font-size: 1.5rem;
-            font-weight: bold;
-
-            opacity: 0;
-            transition: transform ease-in 500ms;
-            animation: scalein 1s ease-in 6s forwards;
-
-        }
-
-        .btnbox button:target{
-            transform: scale(0.5);
-            
-        }
-        
-
-        
-
-
 
     }
 
