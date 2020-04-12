@@ -31,12 +31,11 @@
      <p>datum tid:</p>
      <p> {{ customers[0].date }}</p>
      <p> Med sitplatserna: </p>
-     <p>{{ seats.toString() }}</p>
+     <p>{{ seats.sort().toString() }}</p>
 
      <div class="btnbox">
         <button>ÄNDRA</button>
-        <button>FORTSÄTT</button>
-
+        <button (click)="checkout()" >FORTSÄTT </button>
      </div>
      
 
