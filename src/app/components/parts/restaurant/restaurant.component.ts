@@ -36,6 +36,23 @@ export class RestaurantComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if(this.customers == null){
+      this.forDevOnly();
+    }
+    
+  }
+
+  public forDevOnly(){
+
+    
+
+    let customer:Customer = new Customer();
+    let customer2:Customer = new Customer();
+    customer.id = 0;
+    customer.seat = 0;
+    customer2.seat = 1;
+    this.customers = [customer, customer2];
+  //  push(customer);
   }
 
   isFliped:string = "card";
@@ -64,9 +81,19 @@ export class RestaurantComponent implements OnInit {
 
  public getCustomer(seat:number, index:number){
    
-   this.seat = seat;
-   this.id = index;
-   this.subHeading = "Beställ mat till stol:" + seat;
+  if(this.id === index){
+
+    this.seat = -1;
+    this.id = -1;
+
+  }else{
+
+    this.seat = seat;
+    this.id = index;
+    this.subHeading = "Beställ mat till stol:" + seat;
+
+  }
+  
    
    
  }

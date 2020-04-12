@@ -2,43 +2,60 @@
     <div class="scene">
        <div [class]="isFliped" class="card">
           <div class="card-face card-facefront">
-            <h2>
+            <h2 class="main-h2">
                 {{ resturantHeading }}
             </h2>
-            <h3>{{ subHeading }} </h3>
+            <h3 class="main-h3">{{ subHeading }} </h3>
             <h3 id="totalsum" *ngIf="(seat!=-1)">Summa att betala: {{ customers[id].totalSum }}</h3>
             <!--
                [ngClass]="btn"
-                
+                href="restu/#gotomenu"
                       
             -->
 
             <div class="seats">
-            
+
+                <div [ngClass]="( id == i)? 'chair active' : 'chair'"
+                *ngFor="let customer of customers;let i = index"
+                (click)="getCustomer(customer.seat, i )" >
+                    <a 
+                        >
+
+                            <div class="inner-chair">
+                                {{ customer.seat }}
+                            </div>
+                    </a>
+
+
+                </div>
+            <!--
                 <div 
                  [ngClass]="( id == i)? btnActive : btn"               
                 *ngFor="let customer of customers;let i = index"
                 (click)="getCustomer(customer.seat, i )" >
              <a 
-                href="#gotomenu">
+                href="restu/#gotomenu">
                 beställ till stol
                 {{ customer.seat }} 
             </a>
+           
                 </div>
-              
-            </div>            
+              --> 
+            </div>  
+            <!--          
             <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn" id="gotomenu">
-                <a href="#fram">{{ "Mat" | uppercase }}</a>
+                <a href="restu/#fram">{{ "Mat" | uppercase }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
-                <a href="#fram">{{ "Drycker" | uppercase  }}</a>
+                <a href="restu/#fram">{{ "Drycker" | uppercase  }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(3)" class="btn">
-                <a href="#fram">{{ "Godis" | uppercase   }}</a>
+                <a href="restu/#fram">{{ "Godis" | uppercase   }}</a>
             </div>
             <div (click)="checkoutcustomer()" class="btn checkout">
                 {{ "Gå till kassan" | uppercase   }}
             </div>
+            -->
           </div>
           <div id="fram" class="card-face card-faceback">
 

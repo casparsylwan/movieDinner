@@ -9,6 +9,8 @@
    width: 100%;
    min-height: 100vh;
    animation: slide 2s;
+
+   padding-top: 2rem;
     
 }
 
@@ -61,7 +63,92 @@
   animation: spinning 2s 1;
   }
 
+
+  /*-----------Front-design-----------*/
+
+  .main-h2, .main-h3{
+    text-align: center;
+ 
+    font-weight: bold;
+    color: #f00;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .main-h2{
+     margin-top: 2rem;
+     font-size: 2rem;
+  }
+
+  .main-h3{
+
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  /*-------Chairs-------------*/
+
+  .seats{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+  }
+
+  .chair{
+    
+    display: inline-block;
+
+    border: solid black 3px;
+    border-top: 2px solid #f00;
+    border-radius: 10px;
+    
+    width: 4rem;
+    height: 4rem;
+
+    margin: 1rem;
+
+    animation: go-home 1s;
+  }
+
+  .inner-chair{
+
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    border-top: 2px solid #f00;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+  }
+
+  .chair.active{
+
+    
+    animation: rotate360 3s forwards;
+  }
+
   /*------Keyfram area ---------------*/
+
+  @keyframes rotate360 {
+    
+    0%{ transform: rotate(0deg); background-color: none;}
+    50%{transform: rotate(540deg); background-color: #ff0;}
+    70%{transform: rotate(540deg) translateY(-6rem); background-color: #f00;}
+    100%{transform: scale(1.4) rotate(540deg) translateY(-6rem); background-color: #f00;}
+  }
+
+  @keyframes go-home {
+
+    0%{ transform: scale(1.4) rotate(540deg) translateY(-6rem); background-color: #f00;}
+    50%{opacity: 1; transform: scale(1) translateY(0rem);}
+    100%{opacity: 1;}
+
+  }
 
   @keyframes spinning {
     
@@ -87,7 +174,7 @@
   /*----------Menu-starts-----*/
 
   /*-----Heading front------*/
-
+  /*
   h2, h3{
       
       font-weight: bolder;
@@ -210,7 +297,7 @@ span{
 
 
 /*----Customer----*/
-
+/*
 .seats{
   width: 100%;
   display: flex;
@@ -240,4 +327,4 @@ span{
 }
 
 
-
+*/
