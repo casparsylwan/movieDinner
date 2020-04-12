@@ -44,6 +44,7 @@ export class SeatsComponent implements OnInit {
     
     if(this.seats.indexOf(i)===-1){
       this.seats.push(i);
+      this.seats.sort((num1, num2)=> num1>num2 ? 1 : -1);
     }else{
       this.seats.splice(this.seats.indexOf(i))
     }
@@ -55,10 +56,7 @@ export class SeatsComponent implements OnInit {
         this.customers[i].seat = this.seats[i];
       }
       this.customersEvent.emit(this.customers);
-      //this.seatsTakenBool = true;
-      //this.wraper = "wrap animated flipOut"
-      //setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
-      //this.seatsTakenEvent.emit(this.seatsTakenBool);
+     
     }
 
   }
@@ -69,7 +67,7 @@ export class SeatsComponent implements OnInit {
       this.moviebox = "moviebox scale-out";
       this.cinema = "cinema scale-out";
       this.seatsTakenBool = true;
-      this.customersEvent.emit(this.customers);
+      this.customersEvent.emit(this.customers.sort((customerA, customerB) => customerA.seat > customerB.seat ? 1 : -1 ));
       setTimeout(()=>this.seatsTakenEvent.emit(this.seatsTakenBool), 700);
       
     }
