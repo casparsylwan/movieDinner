@@ -39,16 +39,17 @@
             </a>
            
                 </div>
+                href="#fram"
               --> 
             </div>           
             <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn" id="gotomenu">
-                <a href="#fram">{{ "Mat" | uppercase }}</a>
+                <a >{{ "Mat" | uppercase }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
-                <a href="#fram">{{ "Drycker" | uppercase  }}</a>
+                <a>{{ "Drycker" | uppercase  }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(3)" class="btn">
-                <a href="#fram">{{ "Godis" | uppercase   }}</a>
+                <a>{{ "Godis" | uppercase   }}</a>
             </div>
             <div (click)="checkoutcustomer()" class="btn ">
                 {{ "Gå till kassan" | uppercase   }}
