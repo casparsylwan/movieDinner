@@ -1,6 +1,6 @@
 <div [ngClass]="state===1 && width>=750 ?'wraper one'   : 'wraper'">
     <div *ngIf="!(numberOfTicketChoosen)" [ngStyle]="stateChangeMainTop()" class="top">
-        <h2 *ngIf="state==0 && width>=750" >
+        <h2 *ngIf="state==0">
             {{ fronttext }}
         </h2>
         <h3 class="desc" *ngIf="state===1 && width>=750"> Handling </h3>

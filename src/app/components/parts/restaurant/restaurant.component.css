@@ -117,6 +117,7 @@
     height: 90%;
 
     display: flex;
+    
     align-items: center;
     justify-content: center;
 
@@ -151,7 +152,9 @@
     padding: 0.5rem;
     border-radius: 20px;
     text-align: center;
+
     transition: background-color ease-in 500ms;
+    animation: cinema 1s ease-in;
     
   }
 
@@ -166,6 +169,7 @@
     width:100%;
     padding: 0.5rem;
     border-radius: 20px;
+    margin-left: 1rem;
 }
 
 li{
@@ -211,7 +215,13 @@ span{
 }
 
 
-  /*------Keyfram area ---------------*/
+@media screen and (min-width: 1200px) {
+
+
+
+}
+
+  /*------------------- Keyfram area ---------------*/
 
   @keyframes rotate360 {
     
