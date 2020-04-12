@@ -85,6 +85,7 @@ export class RestaurantComponent implements OnInit {
 
     this.seat = -1;
     this.id = -1;
+    this.subHeading ="Välj stol att beställa till på knappen här under!";
 
   }else{
 

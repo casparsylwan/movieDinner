@@ -159,6 +159,57 @@
     color:#fff;
   }
 
+  /*-------Back side menu--------*/
+
+  ul{
+    
+    width:100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+li{
+    padding-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    
+}
+
+
+.foodlists{
+
+   width: 100%;
+}
+
+.foodlists >.main-h3{
+  color: #000;
+}
+
+li>span:nth-child(2){
+    
+    float: right;
+}
+
+span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.plus, .minus{
+    border-radius: 100%;
+    background-color: #f00;
+    height: 30px;
+    width: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.minus{
+    background-color: #00f;
+}
+
 
   /*------Keyfram area ---------------*/
 
