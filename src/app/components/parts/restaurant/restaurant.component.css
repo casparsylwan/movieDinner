@@ -108,7 +108,7 @@
 
     margin: 1rem;
 
-    animation: go-home 1s;
+    animation: go-home ease-in 1s;
   }
 
   .inner-chair{
@@ -130,6 +130,10 @@
 
     order: 1;
     animation: rotate360 3s forwards;
+  }
+
+  .chair.chair.active p{
+    transform: rotate(180deg);
   }
 
   /*------Keyfram area ---------------*/

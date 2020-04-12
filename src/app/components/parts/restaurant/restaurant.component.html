@@ -18,11 +18,10 @@
                 <div [ngClass]="( id == i)? 'chair active' : 'chair'"
                 *ngFor="let customer of customers;let i = index"
                 (click)="getCustomer(customer.seat, i )" >
-                    <a 
-                        >
+                    <a>
 
                             <div class="inner-chair">
-                                {{ customer.seat }}
+                                <p>{{ customer.seat }}</p>
                             </div>
                     </a>
 
