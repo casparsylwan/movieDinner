@@ -57,7 +57,7 @@
                 <div *ngIf="!(dateSetBoolean) && width>750 && (state==1)" class="display-date-big">
                     <span (click)="setDateAndTime(time)" *ngFor="let time of showTmes; let i = index"> {{ time }}:00</span>
                 </div>
-                <div *ngIf="(state==1) && !(numberOfTicketChoosen) && (dateSetBoolean)" class="howmany-big">
+                <div *ngIf="(state==1) && !(numberOfTicketChoosen) && (dateSetBoolean) && width>750" class="howmany-big">
                     <span >{{ orderText[0] + movieName + " "+  orderText[1] + " " + ticketprice}}&nbsp;kr </span>
                     <span *ngIf="(dateSetBoolean)" >  {{ orderText[2]}} </span>
                     <div *ngIf=" (dateSetBoolean)" class="btn-input">
@@ -70,7 +70,7 @@
             </div>
 
      </div>
-        <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean) && !(seatsTakenBool)"
+        <app-seats *ngIf="(numberOfTicketChoosen) && (dateSetBoolean) && !(seatsTakenBool) "
                     [customers]="customers"
                     [seatsTakenBool]="seatsTakenBool"
                     (customersEvent)="customers=$event"
