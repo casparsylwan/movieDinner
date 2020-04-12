@@ -4,9 +4,25 @@ import { Customer } from '../../models/customer';
 @Component({
   selector: 'app-restaurant',
   templateUrl: './restaurant.component.html',
-  styleUrls: ['./restaurant.component.css']
+  styleUrls: ['./restaurant.component.css'],
+  host: {
+    "(window:resize)":"onWindowResize($event)"
+  }
 })
 export class RestaurantComponent implements OnInit {
+
+   // Get screenSize
+   screenSize:number;
+   width:number = window.innerWidth;
+   height:number = window.innerHeight;
+
+ 
+   onWindowResize(event) {
+    this.width = event.target.innerWidth;
+    this.height = event.target.innerHeight;
+}
+
+
 
   //Customer info
   @Input() customers:Customer[];
@@ -38,13 +54,10 @@ export class RestaurantComponent implements OnInit {
   ngOnInit(): void {
     if(this.customers == null){
       this.forDevOnly();
-    }
-    
+    }    
   }
 
   public forDevOnly(){
-
-    
 
     let customer:Customer = new Customer();
     let customer2:Customer = new Customer();
@@ -52,13 +65,13 @@ export class RestaurantComponent implements OnInit {
     customer.seat = 0;
     customer2.seat = 1;
     this.customers = [customer, customer2];
-  //  push(customer);
+
   }
 
   isFliped:string = "card";
 
   flip(state:number){
-    console.log(this.customers);
+
     this.state = state;
 
     if(this.isFliped === "card"){
@@ -72,12 +85,10 @@ export class RestaurantComponent implements OnInit {
 
   this.state = state;
 
-  console.log(state);
   this.isFliped = "card is-Spinning";
 
-  console.log(this.isFliped);
-
  }
+
 
  public getCustomer(seat:number, index:number){
    
@@ -93,18 +104,12 @@ export class RestaurantComponent implements OnInit {
     this.id = index;
     this.subHeading = "Beställ mat till stol: " + seat;
 
-  }
-  
-   
-   
+    }   
  }
 
   
   public buyCandy(candy:any){
 
-    console.log(candy);
-    console.log(this.customers )
-    console.log(this.customers[this.id].orderList)
     this.customers[this.id].orderList.push(candy);
     this.customers[this.id].calcOrderSum(); 
     this.calcTotalSum()
@@ -113,8 +118,6 @@ export class RestaurantComponent implements OnInit {
   }
 
   public removeCandy(candy:any){
-
-    console.log(candy);
     
     let index = this.customers[this.id].orderList.indexOf(candy);
     if(index != -1){
@@ -129,22 +132,16 @@ export class RestaurantComponent implements OnInit {
 
   public buyFood(food:any){
 
-    console.log(this.customers);
     this.customers[this.id].orderList.push(food);
     this.customers[this.id].calcOrderSum();
     this.calcTotalSum()
-    this.customersEvent.emit(this.customers); 
-
-    
-    
+    this.customersEvent.emit(this.customers);   
   }
 
   public removeFood(food:any){
 
-    console.log(food);
-
     let index = this.customers[this.id].orderList.indexOf(food);
-    console.log(index);
+
     if(index !=-1){
 
       this.customers[this.id].orderList.splice( index, 1);
@@ -158,9 +155,6 @@ export class RestaurantComponent implements OnInit {
 
   public buyDrinks(drinks:any){
 
-    console.log(drinks)
-
-    
     this.customers[this.id].orderList.push(drinks);
     this.customers[this.id].calcOrderSum();
     this.calcTotalSum()
@@ -193,7 +187,6 @@ export class RestaurantComponent implements OnInit {
 
   public checkoutcustomer(){
 
-    console.log("hejhej")
     this.checkout = true;
     this.checkoutEvent.emit(this.checkout);
     this.customersEvent.emit(this.customers);

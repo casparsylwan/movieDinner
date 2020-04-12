@@ -43,7 +43,7 @@
               --> 
             </div>           
             <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn" id="gotomenu">
-                <a href="#fram">{{ "Mat" | uppercase }}</a>
+                <a>{{ "Mat" | uppercase }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
                 <a href="#fram">{{ "Drycker" | uppercase  }}</a>
@@ -68,8 +68,8 @@
                 class="btn">
                 {{ "ok"  | uppercase  }}
             </div>
-            <div
-                *ngIf="state==3"
+         <div
+                *ngIf="state==3 && width && width < 750  "
                 class="foodlists">
                 <h3 class="main-h3">GODIS</h3>
                 <ul>        
@@ -77,9 +77,9 @@
                         <span>{{ candy.name +" " }}</span><span>{{ candy.price +" kr"  }}</span><span *ngIf="id!=-1" ><div (click)="buyCandy(candy)" class="plus">+</div><div (click)="removeCandy(candy)" class="minus">-</div></span>
                     </li>        
                 </ul>                
-          </div>
-          <div 
-            *ngIf="state==2"
+         </div>
+         <div 
+            *ngIf="state==2 && width < 750"
             class="foodlists">
             <h3 class="main-h3"> DRYCKER </h3>            
             <ul>
@@ -89,7 +89,7 @@
             </ul>
          </div>
          <div  
-            *ngIf="state==1"
+            *ngIf="state==1 && width < 750"
             class="foodlists">
             <h3 class="main-h3"> MAT </h3>            
              <ul>
@@ -97,7 +97,56 @@
                     <span>{{ food.name +" "}}  </span><span>{{ food.price +" kr"    }}</span><span *ngIf="id!=-1" ><div (click)="buyFood(food)"   class="plus">+</div><div (click)="removeFood(food)" class="minus">-</div></span>
                 </li>
             </ul>            
-        </div>
+         </div>
+         
+         <!--Start-->
+
+         
+
+         <div class="big-menu">
+                
+            <div
+                *ngIf="width > 750"
+                class="foodlists">
+                    <h3 class="main-h3">GODIS</h3>
+                    <ul>        
+                        <li *ngFor="let candy of candyList">
+                            <span>{{ candy.name +" " }}</span><span>{{ candy.price +" kr"  }}</span><span *ngIf="id!=-1" ><div (click)="buyCandy(candy)" class="plus">+</div><div (click)="removeCandy(candy)" class="minus">-</div></span>
+                        </li>        
+                    </ul>                
+            </div>
+
+
+            <div 
+                *ngIf="width > 750"
+                class="foodlists">
+                <h3 class="main-h3"> DRYCKER </h3>            
+                <ul>
+                    <li *ngFor="let drink of drinkList">
+                        <span>{{ drink.name +" "}}</span><span>{{ drink.price+" kr"  }}</span><span *ngIf="id!=-1" ><div (click)="buyDrinks(drink)" class="plus">+</div><div (click)="removeDrinks(drink)"  class="minus">-</div></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div  
+                *ngIf="width > 750"
+                class="foodlists">
+                <h3 class="main-h3"> MAT </h3>            
+                <ul>
+                    <li *ngFor="let food of foodList">
+                        <span>{{ food.name +" "}}  </span><span>{{ food.price +" kr"    }}</span><span *ngIf="id!=-1" ><div (click)="buyFood(food)"   class="plus">+</div><div (click)="removeFood(food)" class="minus">-</div></span>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+
+
+
+
+
+         <!--end-->
+
         </div>
     </div>
 </div>
