@@ -90,7 +90,7 @@ export class RestaurantComponent implements OnInit {
 
     this.seat = seat;
     this.id = index;
-    this.subHeading = "Beställ mat till stol:" + seat;
+    this.subHeading = "Beställ mat till stol: " + seat;
 
   }
   

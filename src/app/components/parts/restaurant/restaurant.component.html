@@ -42,13 +42,13 @@
               --> 
             </div>           
             <div *ngIf="(seat!=-1)" (click)="flip(1)" class="btn" id="gotomenu">
-                <a href="restu/#fram">{{ "Mat" | uppercase }}</a>
+                <a href="#fram">{{ "Mat" | uppercase }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(2)" class="btn">
-                <a href="restu/#fram">{{ "Drycker" | uppercase  }}</a>
+                <a href="#fram">{{ "Drycker" | uppercase  }}</a>
             </div>
             <div *ngIf="(seat!=-1)" (click)="flip(3)" class="btn">
-                <a href="restu/#fram">{{ "Godis" | uppercase   }}</a>
+                <a href="#fram">{{ "Godis" | uppercase   }}</a>
             </div>
             <div (click)="checkoutcustomer()" class="btn ">
                 {{ "Gå till kassan" | uppercase   }}
