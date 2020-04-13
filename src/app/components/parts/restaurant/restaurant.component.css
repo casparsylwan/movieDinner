@@ -11,6 +11,8 @@
    animation: slide 2s;
 
    padding-top: 2rem;
+
+   overflow-x: hidden;
     
 }
 
@@ -84,6 +86,8 @@
     margin-top: 1.5rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
+
+    
   }
 
   /*-------Chairs-------------*/
@@ -139,6 +143,52 @@
     transform: rotate(180deg);
   }
 
+  /*-----Resturant-svg--------*/
+
+ 
+
+
+
+  #main-h2{
+
+    margin: 2rem 50%;
+    transform: scale(0.7) translateX(-70%);
+    
+    animation: fill 2s ease-in-out 3s forwards;
+  }
+
+  #main-h2 path:nth-child(n){
+
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: line-anim 2s ease-out forwards 2.5s;
+  }
+
+  #resturant{
+  
+    
+    margin: 2rem 50%;
+    
+    
+    transform: scale(0.7) translateX(-70%);
+    
+    animation: fill 2s ease-in-out 3s forwards;
+  }
+
+  #resturant path:nth-child(2n){
+
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: line-anim 2s ease-out forwards 2.5s;
+  }
+
+  #resturant path:nth-child(2n-1){
+
+    stroke-dasharray:   100%;
+    stroke-dashoffset:  100%;
+
+    animation: line-anim 3s ease-in forwards 2s;
+  }
 
   /*------MENU------*/
 
@@ -219,9 +269,46 @@ span{
     background-color: #00f;
 }
 
+@media screen and (max-width: 1200px) {
+
+
+  #resturant, #main-h2{
+  
+    
+    margin: 2rem 50%;   
+    
+    transform: scale(0.5) translateX(-95%);    
+   
+  }
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+
+  #main-h2{
+  
+    
+    margin: 2rem 50%;   
+    
+    transform: scale(0.3) translateX(-165%);    
+   
+  }
+
+
+}
+
 
 @media screen and (min-width: 750px) {
 
+
+  .btn.big{
+    font-size: 3rem;
+    font-weight: bolder;
+    width: 30%;
+    height: 30%;
+  }
 
   .big-menu{
     display: flex;
@@ -245,6 +332,18 @@ span{
 }
 
   /*------------------- Keyfram area ---------------*/
+
+  @keyframes line-anim{
+    to{
+      stroke-dashoffset: 0%;
+    }
+  }
+
+  @keyframes fill {
+    from{ fill: transparent}
+    to{ fill:#fff}
+  }
+
 
   @keyframes rotate360 {
     
