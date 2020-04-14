@@ -110,6 +110,8 @@ export class RestaurantComponent implements OnInit {
   
   public buyCandy(candy:any){
 
+    console.log("hej");
+    console.log(candy);
     this.customers[this.id].orderList.push(candy);
     this.customers[this.id].calcOrderSum(); 
     this.calcTotalSum()
@@ -118,14 +120,16 @@ export class RestaurantComponent implements OnInit {
   }
 
   public removeCandy(candy:any){
-    
+    console.log(candy);
     let index = this.customers[this.id].orderList.indexOf(candy);
     if(index != -1){
+      console.log(this.customers[this.id])
       this.customers[this.id].orderList.splice(index, 1);
-      this.customers[this.seat].calcOrderSum();
+      this.customers[this.id].calcOrderSum();
       this.calcTotalSum()
       this.customersEvent.emit(this.customers);
     }
+    this.calcTotalSum()
   
   }
 

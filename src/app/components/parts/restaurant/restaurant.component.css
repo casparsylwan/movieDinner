@@ -39,6 +39,7 @@
     min-height: 35rem;
     margin-bottom: 4rem;
     backface-visibility: hidden;
+    z-index: -1;
   }
 
   .card-facefront {
@@ -167,11 +168,8 @@
   #resturant{
   
     
-    margin: 2rem 50%;
-    
-    
+    margin: 2rem 50%;  
     transform: scale(0.7) translateX(-70%);
-    
     animation: fill 2s ease-in-out 3s forwards;
   }
 

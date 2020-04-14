@@ -123,6 +123,11 @@ table {
   
   tr:nth-child(1) {background-color: #111;}
 
+  .show-total{
+      color: #FFF;
+      font-weight: bold ;
+      margin: 2rem 0 2rem;
+  }
 
 @keyframes slide {
     
