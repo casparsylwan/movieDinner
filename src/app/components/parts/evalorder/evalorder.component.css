@@ -1,0 +1,44 @@
+.order-wraper{
+    position: absolute;
+    top: 6rem;
+    border-top: double #a00 5px;
+    border-left: double #a00 5px;
+    border-right: double #a00 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    margin: 5rem -4.5rem;
+    padding: 1rem 1rem 1rem 2rem;
+
+    cursor: pointer;
+
+    transition: all 1s;
+
+    transform: rotate(90deg);
+    animation: cinema 1s;
+
+    z-index: 0;
+
+ 
+}
+
+.order-wraper:hover{
+
+    border-top: double #add8ff 5px;
+    border-left: double #add8ff 5px;
+    border-right: double #add8ff 5px;
+
+}
+
+.order-wraper:hover .open-order{
+
+    color:#add8ff;
+}
+
+.open-order{
+    color: #aa0000;
+    font-weight: bold;
+
+    
+    transition: all 1s;
+}

@@ -15,6 +15,7 @@ import { SeatsComponent } from './components/parts/seats/seats.component';
 import { ClickColorDirective } from './components/models/click-color';
 import { RestaurantComponent } from './components/parts/restaurant/restaurant.component';
 import { CheckoutComponent } from './components/parts/checkout/checkout.component';
+import { EvalorderComponent } from './components/parts/evalorder/evalorder.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CheckoutComponent } from './components/parts/checkout/checkout.componen
     SeatsComponent,
     ClickColorDirective,
     RestaurantComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    EvalorderComponent
   ],
   imports: [
     BrowserModule,
