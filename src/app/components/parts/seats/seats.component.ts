@@ -40,6 +40,27 @@ export class SeatsComponent implements OnInit {
     }
   }
 
+  /*
+  getSeats2(i:number){
+
+    let index = this.customers.findIndex(e => e.seat==i);
+    if(index === -1){
+      let next = this.customers.findIndex(e => e.seat == null);
+      this.customers[next].seat = i;
+      this.customers.sort((seat1, seat2) => seat1.seat < seat2.seat ? -1 : 1);
+    }else{
+      this.customers[index].seat = null;
+    }
+  }
+
+  seatTaken(seat:number){
+    let taken = this.customers.findIndex(e => e.seat != seat);
+
+    return seat === -1;
+  }
+
+  */
+
   getSeats( i:number){
     
     if(this.seats.indexOf(i)===-1){

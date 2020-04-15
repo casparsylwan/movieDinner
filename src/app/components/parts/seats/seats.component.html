@@ -6,13 +6,16 @@
     (click)="checkout()">Fortsätt</button>
     -->
     <div [ngClass]="screen">The Show will begin<br/> Välj era {{ numberOfSeats }} sittplatser! 
-        <div *ngFor="let seat of seats"> Vald plats är {{ seat }}  </div> 
+        <div *ngFor="let seat of seats"><p>Vald plats är {{ seat }}</p></div> 
     </div>
+    <!--
+       
+    -->
     
     <div [ngClass]="moviebox">
         
         <div [ngClass]="cinema" *ngFor="let seat of ' '.repeat(20).split(''); index as i" >
-            <div (click)="getSeats( i+1)" class="seat" clickColor [color]="'red'">
+            <div (click)="getSeats( i+1)" class="seat" clickColor [color]="'red'"  >
 
                 <p> {{ i+1 }} </p>
                 <p *ngIf="!!(i%4==0)">{{ "&#9855;" }}</p>
